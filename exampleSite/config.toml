@@ -2,11 +2,7 @@ baseURL = "https://yordanmonev.netlify.com"
 languageCode = "en-us"
 summaryLength = "10"
 theme = "kross-hugo"
-title = "Kross"
-[[menu.main]]
-URL = "about"
-name = "About"
-weight = 1
+title = "Yordan Monev"
 [[menu.main]]
 URL = "blog"
 name = "Blog"
@@ -15,6 +11,10 @@ weight = 2
 URL = "portfolio"
 name = "Portfolio"
 weight = 3
+[[menu.main]]
+URL = "about"
+name = "About"
+weight = 1
 [[menu.main]]
 URL = "contact"
 name = "Contact"
