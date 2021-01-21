@@ -1,0 +1,153 @@
+{{ define "main" }}
+
+<!-- {{ partial "jumbotron" (dict "title" .Params.title "subtitle" .Params.subtitle ) }} -->
+
+{{ $mysection := ($.Site.GetPage "blog" .Section).Pages }}
+{{ range first 1 $mysection }}
+
+<!-- FIRST: {{ .RelPermalink }} -->
+<!-- page header  -->
+{{$cat := index (.Params.categories ) 0 }}
+{{$catbg := (print $cat "-background") }}
+<a href="{{ .RelPermalink }}">
+<div class="flex relative overflow-hidden categories m-nav {{ $catbg }} aspect-ratio--header curve-out-center">
+  <div class="mw7 center pa3-ns flex flex-column flex-row-ns aspect-ratio--object-ns">
+    <div  class="w-100 order-1 order-0-ns">
+      
+      <div class="w-100 w-60-ns h-100 pa3 pt0 pa0-ns flex flex-column justify-center-ns">
+        <!-- {{ $taxonomy := "categories" }}
+          {{ with .Param $taxonomy }}
+            <ul>
+              {{ range $index, $categories := . }}
+                {{ with $.Site.GetPage (printf "/%s/%s" $taxonomy $categories) -}}
+                  <li>
+                    <a href="{{ .Permalink }}" class="link-white">
+                      <h4 class="f8 b white ttu mb2 categories {{ $categories }} category-tag self-start">{{ $categories | urlize }}</h4>
+                    </a>
+                  </li>
+                {{- end -}}
+              {{- end -}}
+            </ul>
+          {{ end }}
+           -->
+          <!-- <h4 class="f8 b white ttu mb2 self-start">Featured article</h4> -->
+        
+        <h1 class="f3 f2-l l db lh-title mb3 mw5-5 white">{{ .Params.title | safeHTML }}</h1>
+        {{- range .Params.authors }}
+        {{- with $.Site.GetPage "taxonomyTerm" (printf "authors/%s" (urlize .)) }}
+        <!-- <a href="{{ .Permalink }}"> -->
+          <figure class="author flex items-center">
+            <div class="fade-wrapper-small">
+              <div class="fade-image">
+                <picture class="bottom">
+                  <source data-srcset="{{.Params.photo}}" type="image/jpeg"> 
+                  <img data-src="{{.Params.photo}}" alt="{{.Params.photoalt}}" class="lazyload">
+                </picture>
+                <!-- <picture class="top">
+                  <source data-srcset="{{.Params.photosecondary}}" type="image/jpeg"> 
+                  <img data-src="{{.Params.photo}}" alt="{{.Params.photoalt}}" class="lazyload">
+                </picture> -->
+              </div>
+            </div>
+            <div class="flex flex-column pl3">
+              <figcaption>
+                <span class="white">{{ .Params.name }}</span>
+              </figcaption>
+              {{ end }}
+              {{ end }}
+              <div class="events-none">
+                <p class="f7 white ma0">{{ .Date.Format "Jan 2, 2006" }} | Read in {{ .ReadingTime }} minutes</p>
+              </div>
+            </div>
+          </figure>
+        <!-- </a> -->
+  
+          <button class="btn-white mt3 mw4">Read more</button>    
+      </div>  
+    </div>
+    
+
+    <div class="absolute-ns w-100 w-60-ns r-20-p bottom-0 order-0 order-1-ns">
+      <div class="overflow-hidden relative top-25 aspect-ratio--16x9-ns">{{ if .Params.image }}
+        <div class="aspect-ratio--object-ns img-blog-header-ns">
+          <img src="{{ .Params.image }}" alt="{{ .Title }}" class="img-auto img-auto-h-ns" />{{ end }}
+        </div>
+      </div>
+    </div>
+    
+  
+  </div>
+</div>
+</a>
+
+
+{{ end }}
+
+<!-- page header ends  -->
+
+<section>
+  <div class="mw7 center pa3">
+    <!-- list of categories -->
+    <ul class="relative flex overflow-scroll mb3 filter">
+      <li class="category mr2 mb2 selected" id="all" data-category-type="all">
+        <!-- <a href="{{ .Page.RelPermalink }}"> -->
+          <!-- <h4 class="f8 b white ttu mb2 categories {{ .Page.Title }} category-tag self-start" data-category-type="{{ .Page.Title }}">{{ .Page.Title }}</h4> -->
+          <h4 class="f8 b white ttu categories all category-tag self-start">All</h4>
+        <!-- </a> -->
+      </li>
+      {{ range .Site.Taxonomies.categories }}
+        
+      <!-- {{ $categoryid := (print "categoryId " .Page.Title ) }} -->
+        <!-- <li id="{{ $categoryid }}"> -->
+        <li class="category mr2 mb2" id="{{ .Page.Title }}" data-category-type="{{ .Page.Title }}">
+          <!-- <a href="{{ .Page.RelPermalink }}"> -->
+            <!-- <h4 class="f8 b white ttu mb2 categories {{ .Page.Title }} category-tag self-start" data-category-type="{{ .Page.Title }}">{{ .Page.Title }}</h4> -->
+            <h4 class="f8 b white ttu categories {{ .Page.Title }} category-tag self-start">{{ .Page.Title }}</h4>
+          <!-- </a> -->
+        </li>
+      {{ end }}
+    </ul>
+    
+    
+    <!--  paginated list of blog posts snipets -->
+    <!-- <ul class="flex-ns flex-wrap justify-between mhn1-ns">
+        {{ range (.Paginator 9).Pages.ByPublishDate.Reverse }}
+            <div class="w-49-ns w-32-m flex">
+              {{ .Render "li"}}
+            </div>
+        {{ end }}
+    </ul>
+    {{ partial "pagination" . }} -->
+    
+    <!-- list of all blog post snipets  -->
+    
+    <ul class="flex-ns flex-wrap justify-between mhn1-ns">
+        {{ range .Pages.ByPublishDate.Reverse }}
+        
+        
+        {{ $taxonomy := "categories" }}
+        	{{ with .Param $taxonomy }}
+        			{{ range $index, $categories := . }}
+        				{{ with $.Site.GetPage (printf "/%s/%s" $taxonomy $categories) -}}
+                    <div class="w-49-ns w-32-m flex card" data-category-type="{{ $categories }}">
+        		{{- end -}}
+        	{{- end -}}
+        {{ end }}      
+        
+        
+        
+              {{ .Render "li"}}
+            </div>
+        {{ end }}
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="mb4 ph3">
+    {{ partial "newsletter-form" .Params }}
+  </div>
+</section>
+
+
+{{end}}

@@ -1,0 +1,10 @@
+<div class="center mw7 ph3 flex flex-column w-100">
+  <h2 class="f3 l di lh-title mb3 black">
+    {{ .heading }}
+  </h2>
+  {{ if .subheading }}
+    <p class="f6 di db black mb0">
+      {{ .subheading | safeHTML }}
+    </p>
+  {{ end }}
+</div>

@@ -1,0 +1,27 @@
+.grad-p {
+  background: linear-gradient(45deg, #0b7da1 0%,#4bbcdf 40%,#6fdde0 100%);
+}
+
+.grad-s {
+  background: linear-gradient(45deg, #180a38 0%,#351869 100%);
+}
+
+.grad-m {
+  background: linear-gradient(to right, rgba(212,220,223,1) 0%,rgba(212,220,223,0) 70%);
+}
+
+.grad-mb {
+  background: linear-gradient(to top, rgba(212,220,223,1) 0%,rgba(212,220,223,0) 70%);
+}
+
+.grad-mt {
+  background: linear-gradient(160deg, rgba(212,220,223,1) 0%,rgba(212,220,223,0) 30%);
+}
+
+.grad-footer {
+  background: linear-gradient(45deg, rgba(24,10,56,1) 0%,rgba(53,24,105,1) 70%);
+}
+
+.grad-secondary-light {
+  background: linear-gradient(to bottom, #dbf2f9 0%, #ffffff 70%);
+}

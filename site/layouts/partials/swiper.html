@@ -1,0 +1,34 @@
+<div class="mw7 center pa3">
+  <div class="tc mb2 pb2">
+    <h2 class="f3 l di lh-title mb3 black">
+      {{.heading }}
+    </h2>
+  </div>
+  {{ if .subheading}}
+  <div class="swiper-container pb3">
+    <div class="mw7 tc mb5">
+      <p class="f5 di db lh-title mb3 black">
+        {{.subheading}}
+      </p>
+    </div>
+    {{ end }}
+    <div class="swiper-wrapper">
+      {{ range .swiper}}
+      <div class="swiper-slide shadow-1 br1 overflow-hidden ph1 pt1">
+        <picture>
+	        <source data-srcset="{{.imagewebp}}" type="image/webp">
+	        <source data-srcset="{{.image}}" type="image/jpeg"> 
+	        <img data-src="{{.image}}" alt="{{.alt}}" class="img-auto pb2 lazyload">
+	      </picture>
+        <div class="ph2">
+          <h3 class="f5 lh-title b mb1">{{ .heading }}</h3>
+          <p class="f6">{{ .text | safeHTML }}</p>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+   <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+</div>

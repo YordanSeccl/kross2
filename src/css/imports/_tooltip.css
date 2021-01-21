@@ -1,0 +1,7 @@
+.tooltip:before {
+    content: "\f149";
+    font-family: "Ionicons";
+    font-size: 20px;
+    font-weight: 500;
+    -webkit-font-smoothing: auto;
+}

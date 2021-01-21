@@ -1,0 +1,52 @@
+<div class="pb4-ns relative">
+  <div class="mw7 center ph3">
+    {{ if .heading }}
+    <h2 class="f3 lh-title mb2 l tc">{{.heading}}</h2>
+    {{ end }}
+    {{ if eq .linked true }}
+    <div class="help-container pv2 flex flex-wrap justify-between mhn2-ns relative z-1">
+      {{ range .option }}
+        <a class="panel raise w-100 w-49-ns db" href="{{ .ctaurl }}" {{ if eq .externallink true }} target="_blank" rel="noreferrer" {{ end }} {{ if eq .function true }} onclick="Beacon('open')" {{ end }} >
+          <span class="w-100 h-100 bg-off-white br1 db shadow-1 flex justify-between items-center pv3">
+            <span class="db pl3">
+              <h3 class="f5 lh-title b">{{.heading}}</h3>
+              <p class="f6">{{.text}}</p>
+              <span class="link-arrow b f7">{{.buttonText}}
+                <span class="arrow-right-pink"></span>
+              </span>
+            </span>
+            <span class="image help-image pr2">
+              <picture>
+                <source data-srcset="{{.imagewebp}}" type="image/webp">
+                <source data-srcset="{{.image}}" type="image/jpeg"> 
+                <img data-src="{{.image}}" alt="{{.alt}}" class="img-auto lazyload">
+              </picture>
+            </span>
+          </span>
+        </a>
+      {{ end }}
+    </div>
+    {{ else }}
+    <div class="help-container pv2 flex flex-wrap justify-between mhn2-ns relative z-1">
+      {{ range .option }}
+        <div class="panel w-100 w-49-ns db">
+          <span class="w-100 h-100 bg-off-white br1 db shadow-1 flex justify-between items-center pv3">
+            <span class="db pl3">
+              <h3 class="f5 lh-title b">{{.heading}}</h3>
+              <p class="f6">{{.text}}</p>
+            </span>
+            <span class="image help-image pr2">
+              <picture>
+                <source data-srcset="{{.imagewebp}}" type="image/webp">
+                <source data-srcset="{{.image}}" type="image/jpeg"> 
+                <img data-src="{{.image}}" alt="{{.alt}}" class="img-auto lazyload">
+              </picture>
+            </span>
+          </span>
+        </div>
+      {{ end }}
+      </div>
+    {{ end }}
+  </div>
+</div>
+

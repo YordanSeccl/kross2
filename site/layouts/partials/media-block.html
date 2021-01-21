@@ -1,0 +1,26 @@
+{{ if .medialist.heading }}
+<div class="center mw7 ph3 tc">
+  <h2 class="f3 l lh-title mb2">{{ .medialist.heading }}</h2>
+</div>
+{{ end }}
+<div class="flex flex-wrap flex-wrap-mi justify-between mw7 pa3 center media">
+  {{ range .medialist.logos }}
+  <div class="flex justify-center media-container w-30">
+    {{ if .ctaurl }}
+    <a href="{{.ctaurl}}" target="_blank" rel="noreferrer">
+      <picture>
+        <source srcset="{{.logowebp}}" type="image/webp">
+        <source srcset="{{.logo}}" type="image/jpeg"> 
+        <img src="{{.logo}}" alt="{{.alt}}" class="db logo-sm img-grey">
+      </picture>
+    </a>
+    {{ else }}
+      <picture>
+        <source srcset="{{.logowebp}}" type="image/webp">
+        <source srcset="{{.logo}}" type="image/jpeg"> 
+        <img src="{{.logo}}" alt="{{.alt}}" class="img-auto db logo-sm">
+      </picture>
+    {{ end }}
+  </div>
+  {{ end }}
+</div>

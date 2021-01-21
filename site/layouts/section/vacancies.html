@@ -1,0 +1,30 @@
+
+{{ define "main" }}
+{{ partial "jumbotron" (dict "title" .Params.title "subtitle" .Params.subtitle ) }}
+
+{{ if (.Pages) }}
+<section class="grad-m pv4 pv5-m">
+  <div class="mw7 center pv4 ph3">
+    <h1 class="f2 l lh-title mb2 w-60-l" id="latest-roles">Latest roles</h1>
+    <ul class="flex-ns flex-wrap mhn1-ns">
+        {{ range (.Paginator).Pages.ByPublishDate.Reverse }}
+            <div class="w-50-ns pa2-ns flex">
+              {{ .Render "job-post"}}
+            </div>
+        {{ end }}
+    </ul>
+    {{ partial "pagination" . }}
+  </div>
+  {{ else}}
+  {{ partial "title-subtitle-left" .Params.nopositionsnotice }}
+  {{ end }}
+</section>
+<section class="grad-m pv4 pv5-m">
+  {{ partial "title-subtitle-left" .Params.recruitersnotice }}
+</section>
+
+<section class="pb4 grad-m">
+  {{ partial "newsletter-form" .Params }}
+</section>
+{{end}}
+

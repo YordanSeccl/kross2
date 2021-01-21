@@ -1,0 +1,70 @@
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-T4PZWMN');</script>
+  <!-- End Google Tag Manager -->
+  <title>{{ .Params.metatitle }}</title>
+  {{ $stylesheet := .Site.Data.webpack.main }}
+  {{ with $stylesheet.css }}
+    <link href="{{ relURL . }}" rel="stylesheet">
+  {{ end }}
+
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="{{ .Params.metadescription }}">
+  <base href="{{ if getenv "CONTEXT" }}{{ cond (eq "production" (getenv "CONTEXT")) (getenv "URL") (getenv "DEPLOY_PRIME_URL") }}{{ else }}{{ $.Site.BaseURL }}{{ end }}">
+
+	<meta name="theme-color" content="#fff">
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/img/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/img/apple-touch-icon-60x60.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/img/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/img/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/img/apple-touch-icon-152x152.png" />
+  <link rel="icon" type="image/png" href="/img/favicon-196x196.png" sizes="196x196" />
+  <link rel="icon" type="image/png" href="/img/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16" />
+  <link rel="icon" type="image/png" href="/img/favicon-128.png" sizes="128x128" />
+  <meta name="application-name" content="Pioneering platform technology for advice and investment firms"/>
+  <meta name="msapplication-TileColor" content="#FFFFFF" />
+  <meta name="msapplication-TileImage" content="/img/mstile-144x144.png" />
+  <meta name="msapplication-square70x70logo" content="/img/mstile-70x70.png" />
+  <meta name="msapplication-square150x150logo" content="/img/mstile-150x150.png" />
+  <meta name="msapplication-wide310x150logo" content="/img/mstile-310x150.png" />
+  <meta name="msapplication-square310x310logo" content="/img/mstile-310x310.png" />
+
+  <link rel="canonical" {{ if .Params.canonicalLink  }} href="{{ .Params.canonicalLink }}" {{else}} href="{{ .Permalink | absURL }}" {{end}} >
+  <link href="{{ .Permalink | absURL }}" hreflang="x-default" rel="alternate" />
+  <link href="{{ .Permalink | absURL }}" hreflang="en-gb" rel="alternate" />
+
+	<!-- Open Graph -->
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="{{ .Params.metatitle }}" />
+  <meta property="og:description" content="{{ .Params.metadescription }}" />
+	<meta property="og:url" content="{{ .Permalink | absURL }}" />
+  <meta property="og:site_name" content="Seccl Technology" />
+  <meta property="og:image" content="{{ .Params.ogimage | absURL }}" />
+  <meta property="og:image:secure_url" content="{{ .Params.ogimage | absURL }}" />
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ .Params.metatitle }}" />
+  <meta name="twitter:description" content="{{ .Params.metadescription }}" />
+  <meta name="twitter:image" content="{{ .Params.ogimage | absURL }}" />
+  <meta name="twitter:site" content="@seccltech" />
+  <meta name="twitter:creator" content="@seccltech" />
+  
+  {{ if .IsHome }}
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  {{ end }}
+  <script type="text/javascript">!function(e,t,n){function a(){var e=t.getElementsByTagName("script")[0],n=t.createElement("script");n.type="text/javascript",n.async=!0,n.src="https://beacon-v2.helpscout.net",e.parentNode.insertBefore(n,e)}if(e.Beacon=n=function(t,n,a){e.Beacon.readyQueue.push({method:t,options:n,data:a})},n.readyQueue=[],"complete"===t.readyState)return a();e.attachEvent?e.attachEvent("onload",a):e.addEventListener("load",a,!1)}(window,document,window.Beacon||function(){});</script>
+  <script type="text/javascript">window.Beacon('init', '0a8614f1-1825-4f2e-b8cb-8f265e087d1c')</script>
+  
+</head>

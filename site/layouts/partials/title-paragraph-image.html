@@ -1,0 +1,36 @@
+<div class="center mw7 ph3">
+  <div class="flex justify-between">
+    <div class="w-100 w-60-ns w-48-ns">
+      <div class="relative tl mb2 pb2">
+        <h2 class="f3 l di lh-title mb3 black">
+          {{ .heading }}
+        </h2>
+      </div>
+      {{ if .subheading }}
+      <div class="mw7 relative">
+        <p class="f6 di db mb3 black">
+          {{ .subheading }}
+        </p>
+      </div>
+      {{ end }}
+      {{ if .ctatext }}
+      <div>
+        <a href="{{ .ctaurl | absURL }}" {{ if eq .externallink true }} target=“_blank” rel=“noreferrer” {{ end }}>
+          <button class="btn btn-tertiary">{{ .ctatext }}</button>
+        </a>
+      </div>
+      {{ end }}
+    </div>
+    <div class="w-40 w-48-ns relative guide">
+      {{ if .image }}
+      <a href="{{ .ctaurl | absURL }}" {{ if eq .externallink true }} target=“_blank” rel=“noreferrer” {{ end }}>
+        <picture>
+	        <source data-srcset="{{.imagewebp}}" type="image/webp">
+	        <source data-srcset="{{.image}}" type="image/jpeg">
+	        <img data-src="{{.image}}" alt="Operating your own platform guide" class="img-auto absolute img-outpos lazyload">
+	      </picture>
+      </a>
+      {{ end }}
+    </div>
+  </div>
+</div>

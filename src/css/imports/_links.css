@@ -1,0 +1,38 @@
+.link, .link-subtle {
+  text-decoration: none;
+  /* transition: var(--hover-transition); */
+  color: inherit;
+}
+
+.link:link,
+.link:visited {
+  /* transition: color .15s ease-in; */
+}
+.link:hover, .link-subtle:hover   {
+  /* transition: color .15s ease-in; */
+  /* text-decoration: underline; */
+  color: var(--pink);
+}
+.link:active  {
+  /* transition: color .15s ease-in; */
+}
+.link:focus   {
+  /* transition: color .15s ease-in; */
+  outline: 1px dotted currentColor;
+}
+
+.link-subtle {
+  color: var(--grey-2);
+}
+
+.link-white {
+  color: var(--white);
+}
+.link-white:hover,
+.link-black:hover {
+  text-decoration: underline;
+}
+
+.link-black {
+  color: var(--black);
+}

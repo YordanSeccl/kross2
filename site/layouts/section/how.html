@@ -1,0 +1,24 @@
+
+{{ define "main" }}
+{{ partial "jumbotron-how" (dict "title" .Params.title "subtitle" .Params.subtitle "buttontext" .Params.buttontext "buttonurl" .Params.buttonurl ) }}
+
+<section class="pv4 pv5-m cover bg-off-white {{.Params.section1.backgroundstyle}}">
+  {{ partial "text-list-and-image-left" .Params.section1 }}
+</section>
+<section class="pv4 pv7-m cover grad-m {{.Params.section2.backgroundstyle}}">
+  {{ partial "text-list-and-image-right" .Params.section2 }}
+</section>
+<section class="pv4 pv5-m" id="guide">
+  {{ partial "title-paragraph-2-up" .Params.section3 }}
+</section>
+<section class="pv4 pv5-m grad-m">
+  {{ partial "title-paragraph-image" .Params.section4 }}
+</section>
+<section class="pv4 pv6-m" id="whodoeswhat">
+  {{ partial "sections-expander" .Params }}
+</section>
+<section class="grad-m pv4 pv5-m">
+  {{ partial "cta-block" .Params }}
+</section>
+
+{{end}}

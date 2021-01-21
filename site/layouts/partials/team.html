@@ -1,0 +1,78 @@
+<div class="tc center mw7 pa3">
+  <h2 class="f3 l db lh-title mb3 black mb4">
+    {{.heading}}
+  </h2>
+  <div class="relative">
+    {{ if .subheading}}
+    <h2> {{.subheading}}</h2>
+    {{ end }}
+<ul class="flex flex-wrap justify-between">
+
+{{$len := len .teamlist}}
+{{if eq (len .teamlist) 3}}
+{{ range .teamlist}}
+<li class="w-100 w-49-ns w-32-m team-member raise flex flex-column pa3 bg-white items-center mb4 br1 shadow-1">
+  {{ if .authorURL}}<a href="{{.authorURL}}">{{end}}
+  <h3 class="secondary f5">{{.name}}</h3>
+  <h4 class="f5 pb3">{{.position}}</h4>
+  <div class="fade-wrapper center">
+    <div class="fade-image">
+      <picture class="bottom">
+        <source data-srcset="{{.image}}" type="image/jpeg"> 
+        <img data-src="{{.image}}" alt="{{.alt}}" class="lazyload">
+      </picture>
+      <picture class="top">
+        <source data-srcset="{{.imagesecondary}}" type="image/jpeg"> 
+        <img data-src="{{.image}}" alt="{{.alt}}" class="lazyload">
+      </picture>
+    </div>
+  </div>
+  {{ if .intro}}
+  <p class="f6 tl pt4">{{ .intro | safeHTML }}</p>
+  {{end}}
+  {{ if .authorURL}}</a>{{end}}
+</li>
+{{end}}
+{{else}}
+{{ range .teamlist}}
+<li class="w-100 w-49-ns w-32-m w-24-l team-member raise flex flex-column pa3 bg-white items-center mb4 br1 shadow-1">
+  {{ if .authorURL}}<a href="{{.authorURL}}">{{end}}
+  <h3 class="secondary f5"> {{.name}}</h3>
+  <h4 class="f5 pb3"> {{.position}}</h4>
+  <div class="fade-wrapper center">
+    <div class="fade-image">
+      <picture class="bottom">
+        <source data-srcset="{{.image}}" type="image/jpeg"> 
+        <img data-src="{{.image}}" alt="{{.alt}}" class="lazyload">
+      </picture>
+      <picture class="top">
+        <source data-srcset="{{.imagesecondary}}" type="image/jpeg"> 
+        <img data-src="{{.image}}" alt="{{.alt}}" class="lazyload">
+      </picture>
+    </div>
+  </div>
+  <div class="social-block">
+    <ul class="f6 flex justify-between flex-wrap mt3 social-block-wrapper">
+      {{ if .linkedinURL}}
+      <li class="minw1 social-item"><a href="{{.linkedinURL}}" target="_blank" rel="noreferrer"><img src="/img/icons-linkedin-black.svg" alt="Seccl linkedin" class="social-icon"/></a></li>
+      {{ end}}
+      {{ if .twitterURL}}
+      <li class="minw1 social-item"><a href="{{.twitterURL}}" target="_blank" rel="noreferrer"><img src="/img/icons-twitter-black.svg" alt="Seccl twitter" class="social-icon"/></a></li>
+      {{end}}
+      {{ if .instagramURL}}
+      <li class="minw1 social-item"><a href="{{.instagramURL}}" target="_blank" rel="noreferrer"><img src="/img/icons-instagram-black.svg" alt="Seccl instagram" class="social-icon"/></a></li>
+      {{end}}
+    </ul>
+  </div>
+  {{ if .intro}}
+  <p class="f6 tl pt4">{{ .intro | safeHTML }}</p>
+  {{end}}
+  {{ if .authorURL}}</a>{{end}}
+</li>
+{{end}}
+{{end}}
+
+
+</ul>
+</div>
+</div>

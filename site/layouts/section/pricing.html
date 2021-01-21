@@ -1,0 +1,206 @@
+
+{{ define "main" }}
+
+<section class="pb3">
+{{ partial "jumbotron" (dict "title" .Params.title "subtitle" .Params.subtitle "buttontext1" .Params.buttontext1 "buttontext2" .Params.buttontext2 "buttonurl1" .Params.buttonurl1 "buttonurl2" .Params.buttonurl2 ) }}
+</section>
+
+
+<section id="usecases" class="relative grad-footer pv7-m curve-in-center curve-in-center-flip">
+  <div class="pa3">
+    <h2 class="center white tc l f2 pt4 pt5-ns pt0-m">Our two typical use cases</h2>
+
+    <div class="flex flex-wrap pv4 center justify-center w-100">
+
+      <div class="statement-container w-100 w-50-ns flex justify-center use-1 relative mb4 mb0-ns">
+        <div class="f7 tc statement flex w-100 w-80-ns w-70-l">
+          <div class="statement-inner flex flex-column justify-arround bg-white pa4">
+            <span class="image pricing-image pb1">
+              <picture>
+                <source data-srcset="/img/code.jpg" type="image/jpeg">
+                <img data-src="/img/code.jpg" alt="Code illustration" class="img-auto lazyload">
+              </picture>
+            </span>
+          <h3 class="b tc f5 black pb1">Build your own investment interface</h3>
+          <span class="black f7">Take Seccl’s custody, settlement and trading infrastructure, and build your own service directly on top. Great for fintechs or investment firms who have their own tech teams and are eager to get to market fast.</span>
+          </div>
+        </div>
+      </div>
+
+      <span class="f2 l white tc db pb4 pb6-ns absolute-ns" style="top: 40%;">Or</span>
+
+      <div class="statement-container w-100 w-50-ns flex justify-center use-2 pb4 pb0-ns">
+        <div class="f7 tc statement flex w-100 w-80-ns w-70-l">
+          <div class="statement-inner flex flex-column justify-arround bg-white pa4">
+            <span class="image pricing-image pb1">
+              <picture>
+                <source data-srcset="/img/user-interfaces.jpg" type="image/jpeg">
+                <img data-src="/img/user-interfaces.jpg" alt="User interfaces illustrations" class="img-auto lazyload">
+              </picture>
+            </span>
+          <h3 class="b tc f5 black pb1">Take our off-the-shelf portals</h3>
+          <span class="black f7">Operate your own adviser platform with Seccl at its core: we’ll act as custodian and provide brandable adviser and client portals – you'll handle the day-to-day operational management. Perfect for advisers or DFMs looking to own the platform experience.</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="statement-container w-100 w-50-ns w-45-l center mb5 use-3 relative pt6">
+      <div class="statement w-70 w-60-m w-50-l center">
+        <div class="statement-inner flex flex-column justify-arround bg-pink">
+        <h4 class="f6 pb2">Both powered by</h4>
+        <h2 class="tc f4 l white">Seccl’s custody, trading and settlement API</h2>
+        </div>
+      </div>
+    </div>
+</div>
+</section>
+
+<section class="grad-mb pv5">
+  <h2 class="center black tc l f2">Typical charging structure</h2>
+  <div class="flex flex-wrap pa3 center mw6 justify-around pt4 pb5">
+
+    <div class="structure-1 relative flex flex-column w-100 w-40-m mb3 mb0-m">
+      <div class="br1 pa4 bg-white shadow-1 f-g-1">
+        <h3 class="tc b pb3 w-100">Your client pays you…</h3>
+        <h3 class="tc b f7">Platform fee</h3>
+        <span class="pb3 f7 tc db">A monthly fee covering …</span>
+        <ul class="structure-list f7 tc">
+          <li style="margin-bottom: 1.75rem;">Custody</li>
+          <li style="margin-bottom: 1.75rem;">Trading costs</li>
+          <li>Investment activity</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="structure-2 relative flex flex-column w-100 w-40-m">
+      <div class="flex flex-column">
+      <div class="br1 bg-white shadow-1 pa4 mb3">
+        <h3 class="tc b pb3 w-100">Your firm pays us…</h3>
+        <ul class="structure-list f7 tc">
+          <li><h3 class="tc b f7">Custody fee</h3><span class="f7 tc db">Charged on each client’s portfolio</span></li>
+          <li>Trading and investment fees</li>
+          <li>Direct Debit costs</li>
+          <li>Cost for interface (if not building yourself)</li>
+        </ul>
+      </div>
+      <div class="brdot br1 flex items-center justify-center">
+        <h3 class="tc b f6 pa3">Your potential platform margin</h3>
+      </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="mb6">
+{{ partial "jumbotron" (dict "title" .Params.section2title "subtitle" .Params.section2subtitle "buttontext1" .Params.buttontext3 "buttontext2" .Params.buttontext4 "buttonurl1" .Params.buttonurl3 "buttonurl2" .Params.buttonurl4 ) }}
+</section>
+
+<section class="ph3 pv5 grad-m relative" id="calculator">
+{{ partial "pricing-calculator" .Params }}
+</section>
+
+<section id="costs">
+{{ partial "jumbotron" (dict "title" .Params.section3title "subtitle" .Params.section3subtitle ) }}
+</section>
+
+<section class="bg-off-white pv4 pv5-m cover {{.Params.section1.backgroundstyle}}">
+  <div class="relative">
+  	<div class="ph3 mw7 center">
+  		<div class="flex flex-wrap flex-column flex-row-m mhn2-l">
+  			<div class="w-100 w-50-m mr4">
+  				<h2 class="f3 l lh-title mb4">Digital custody</h2>
+  				<ul class="breakdown-list mb4">
+  					<li class="pb3 f6 flex justify-between">
+  						<span class="db b">AUM per client</span>
+  						<span class="db b">Price</span>
+  					</li>
+  					<li class="pb3 f6 flex justify-between">
+  						<span class="db f7 b">£0 to £500k</span>
+  						<span class="db f7">10 bps</span>
+  					</li>
+  					<li class="pb3 f6 flex justify-between">
+  						<span class="db f7 b">£500k to £1 million</span>
+  						<span class="db f7">5 bps</span>
+  					</li>
+  					<li class="pb3 f6 flex justify-between">
+  						<span class="db f7 b">£1 million +</span>
+  						<span class="db f7">0 bps</span>
+  					</li>
+  				</ul>
+          <p class="f7">Clients' platform and adviser charges are calculated based on their end-of-day portfolio valuations during the previous month. Firms will be subject to a minimum custody charge of £36,000 per year.</p>
+          <h2 class="f3 l lh-title pv4">Client and adviser portals</h2>
+          <p class="f7">Our portals for clients and advisers are priced at £12 per year (+ VAT) per client, subject to another minimum charge of £36,000 per year (+ VAT), separate to the minimum custody charge. Note that, unlike our digital custody service, our client portals are subject to VAT. Any improvements to the interface will automatically flow into portals at no extra cost.</p>
+  			</div>
+  		</div>
+  	</div>
+  </div>
+</section>
+
+<section class="bg-off-white pv4 pv5-m cover {{.Params.section2.backgroundstyle}}">
+  <div class="relative">
+  	<div class="ph3 mw7 center">
+  		<div class="flex flex-column flex-row-m justify-end mhn2-l">
+  			<div class="w-100 w-50-m mr4">
+  				<h2 class="f3 l lh-title mb4">Other variable costs</h2>
+  				<ul class="breakdown-list mb4">
+  					<li class="pb3 f6 flex justify-between">
+  						<span class="db b">Item</span>
+  						<span class="db b">Cost</span>
+  					</li>
+  					<li class="pb3 f6 flex justify-between">
+  						<span class="db f7 b">Direct Debit (per DD)</span>
+  						<span class="db f7">£0.50</span>
+  					</li>
+  					<li class="pb3 f6 flex justify-between">
+  						<span class="db f7 b">Instrument charge (per year, per instrument)</span>
+  						<span class="db f7">£36.50, i.e. 100 lines of stock = £3,650</span>
+  					</li>
+  					<li class="pb3 f6 flex justify-between">
+  						<span class="db f7 b">Fund transactions</span>
+  						<span class="db f7">No cost</span>
+  					</li>
+  					<li class="pb3 f6 flex justify-between">
+  						<span class="db f7 b">UK ETF & Shares (bulk traded at the end of day)</span>
+  						<span class="db f7">4 bps per trade (minimum of £4)</span>
+  					</li>
+  					<li class="pb3 f6 flex justify-between">
+  						<span class="db f7 b">In specie transfers (per line, per wrapper)</span>
+  						<span class="db f7">£1</span>
+  					</li>
+  					<li class="pb3 f6 flex justify-between">
+  						<span class="db f7 b">Non-SIPP pension transfers (through Origo)</span>
+  						<span class="db f7">£15 per pension</span>
+  					</li>
+  				</ul>
+          <h3 class="f5 pb3 lh-title b">SIPP costs</h3>
+          <ul class="breakdown-list mb4">
+            <li class="pb3 f6 flex justify-between">
+              <span class="db b">Account</span>
+              <span class="db b">Maximum cost</span>
+            </li>
+            <li class="pb3 f6 flex justify-between">
+              <span class="db f7 b">Accumulation</span>
+              <span class="db f7">£50 + VAT</span>
+            </li>
+            <li class="pb3 f6 flex justify-between">
+              <span class="db f7 b">Decumulation</span>
+              <span class="db f7">£125 + VAT, in addition to accumulation cost (i.e. £175 + VAT)</span>
+            </li>
+          </ul>
+          <p class="f7 b">Note: these variable costs are to cover the charges that we ourselves take on when facilitating transactions.</p>
+  			</div>
+  		</div>
+  	</div>
+  </div>
+</section>
+
+
+
+<section class="g-off-white pt5">
+  {{ partial "2-up" .Params.help }}
+</section>
+
+{{end}}

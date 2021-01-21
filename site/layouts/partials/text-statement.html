@@ -1,0 +1,35 @@
+  {{ range .statements }}
+<div class="statement-container center mw7 ph3 flex flex-wrap flex-wrap-ni justify-center justify-between-ms items-center">
+    <div class="statement {{ .statementcolour }} w-100 w-40-ns mh4 mw5 mb4 mb0-ns raise shadow-1">
+      <a href="https://www.ftadviser.com/your-industry/2019/08/07/drop-in-advisers-accepting-100k-clients/" target="_blank">
+      <div class="statement-inner flex flex-column justify-arround">
+        {{ if .statementtitle }}
+         <h2 class="{{ if eq .data true }}f0{{else}}f2{{end}} font-primary l lh-title">{{ .statementtitle }}</h2>
+        {{ end }}
+        {{ if .statementsubtitle }}
+         <h4 class="f7 ph2">{{ .statementsubtitle }}</h4>
+        {{ end }}
+        {{ if .statementsource }}
+         <span class="pt3">{{ .statementsource }}</span>
+        {{ end }}
+      </div>
+    </a>
+    </div>
+  <div class="w-100 w-60-ns">
+    {{ if .heading }}
+    <div class="mb2 pb2">
+      <h2 class="f3 l di lh-title mb3 black">
+        {{ .heading }}
+      </h2>
+    </div>
+    {{ end }}
+    {{ if .subheading }}
+    <div class="mw7">
+      <p class="f6 di db black mb0">
+        {{ .subheading | safeHTML }}
+      </p>
+    </div>
+    {{ end }}
+  </div>
+</div>
+{{ end }}

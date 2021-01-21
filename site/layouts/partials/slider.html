@@ -1,0 +1,31 @@
+<div class="center w-60 pa4 br1 shadow-1 ma4">
+  {{ .title }}
+  <div class="flex items-center flex-column flex-row-ns justify-center flex-wrap">
+    {{ range .formgroup }}
+      <div class="w-100 flex flex-column mv3 form-group pb3">
+        <label for="{{ .title }}">{{ .title }}
+          {{ if .tooltip}}
+            <span data-tippy-content="{{ .tooltip | safeHTML }}" id="button" class="tooltip" aria-describedby="tooltip"></span>
+          {{ end }}
+        </label>
+        <div class="flex flex-wrap justify-between">
+          <span class="f6 w-50">{{ .subtitle | safeHTML }}</span>
+          {{ if eq .type "range" }}
+          <span class="label1 items">{{ .valuetype }} <input type="number" id="{{ .inputid }}" min="{{ .min }}" max="{{ .max }}"></input></span>
+          <input id="{{ .fieldid }}" name="{{ .fieldid }}" type="{{ .type }}" step="{{ .step }}" min="{{ .min }}" max="{{ .max }}" value="{{ .value }}" data-rangeslider>
+          <div class="slider-scale w-100 flex justify-between">
+            <span>{{ .valuetype }}{{ .min }}</span>
+            <span>{{ .valuetype }}{{ .max }}</span>
+          </div>
+          {{ else if eq .type "switch" }}
+          <span class="label1 items">{{ .valuetype }}</span>
+            <div class="onoffswitch self-start">
+              <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="{{ .inputid }}">
+              <label class="onoffswitch-label" for="{{ .inputid }}"></label>
+            </div>
+          {{ end}}
+        </div>
+      </div>
+    {{ end }}
+  </div>
+</div>

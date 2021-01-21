@@ -1,0 +1,20 @@
+{{ if gt .Paginator.TotalPages 1 }}
+ 
+<nav class="cf pa3">
+    {{ if .Paginator.HasNext }}
+    <a class="link f5 pa2 l secondary flex items-center" title="Next Page" href="{{ .Paginator.Next.URL }}">
+      <div class="w40-p flex mr1"><img src="/img/icon-arrow-left.svg" alt="previous"></div>
+      Previous  
+    </a>
+    {{ end }}
+    <div class="pagination">
+        {{ if .Paginator.HasPrev }}
+        <a class="link f5 l pal secondary flex items-center justify-end" title="Previous Page" href="{{ .Paginator.Prev.URL }}">
+          Next
+          <div class="w40-p flex ml1"><img src="/img/icon-arrow-right.svg" alt="next"></div>
+        </a>
+        {{ end }}
+    </div>
+</nav>
+ 
+{{ end }}

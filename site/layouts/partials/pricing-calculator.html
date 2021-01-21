@@ -1,0 +1,277 @@
+<div class="center w-100 w-70-ns w-50-m pa3 pa4-m br1 shadow-1 mt3 mw5-5 bg-white">
+  <h3 class="f5 mb3 lh-title tc b">Get a rough estimate, and explore how the costs work in practice.</h3>
+  <h4 class="f7 mb3 lh-copy tc">Use the slider to choose a rough amount, or type an exact figure into the box.</h4>
+  <div class="flex items-center flex-column flex-row-ns justify-center flex-wrap">
+
+    <div class="w-100 flex flex-column mv3 form-group pb3">
+      <label for="{{ .title }}" class="mb2">Target AUM
+        <span data-tippy-content="In reality, our custody service is charged based on the size of the individual client portfolios – but for ease we'll assume a 0.1% custody charge across your total AUM. See our pricing breakdown below for more info." id="button" class="tooltip" aria-describedby="tooltip"></span>
+      </label>
+      <div class="flex flex-wrap justify-between">
+        <span class="f7 w-50">Roughly what level of assets would you expect to manage?</span>
+        <!-- Input 1  AUM-->
+        <span class="label1 items f7">£ <input type="text" id="input1" min="0" max="1000000000" maxlength="12" value="0"></input></span>
+        <!-- Field 1 AUM -->
+        <input class="w-100" id="field1" name="field1" step="25000000" type="range" min="0" max="1000000000" value="0" data-rangeslider>
+        <div class="slider-scale w-100 flex justify-between">
+          <span class="f7">£0</span>
+          <span class="f7">£1,000,000,000</span>
+        </div>
+      </div>
+    </div>
+    <div class="w-100 flex flex-column mb3 form-group pb3">
+      <label for="{{ .title }}" class="mb2">Target customer numbers
+      </label>
+      <div class="flex flex-wrap justify-between">
+        <span class="f7 w-50">Roughly how many investors do you expect to use your service?</span>
+        <!-- Input 2 - Number of investors -->
+        <span class="label2 items"><input type="text" id="input2" min="0" max="50000 " maxlength="7" value="0"></input></span>
+        <!-- Field 2 - Number of investors -->
+        <input class="w-100" id="field2" name="field2" type="range" step="1250" min="0" max="50000 " value="0" data-rangeslider>
+        <div class="slider-scale w-100 flex justify-between">
+          <span class="f7">0</span>
+          <span class="f7">50,000</span>
+        </div>
+      </div>
+    </div>
+    <div class="w-100 flex flex-column mb3 form-group pb3">
+      <label for="{{ .title }}" class="mb2">Client and/or adviser portals
+        <span data-tippy-content="If you have your own development team, you can build your own interface on top of Seccl's custody, trading and settlement API if you like.<br><br>But if you don't, or don't want to, our intuitive off–the–shelf ones will do the job perfectly." id="button" class="tooltip" aria-describedby="tooltip"></span>
+      </label>
+      <div class="flex flex-wrap justify-between">
+        <span class="f7 w-50">Would you be using our off-the-shelf investor or client management portals?</span>
+        <div class="onoffswitch self-start">
+          <!-- Toggle 1 - UI -->
+          <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="switchUIs">
+          <label class="onoffswitch-label" for="switchUIs"></label>
+        </div>
+      </div>
+    </div>
+    <div class="w-100 flex flex-column mb3 form-group pb3">
+      <label for="{{ .title }}" class="mb2">Pension
+        <span data-tippy-content="We offer our pension through third–party SIPP specialist, Gaudi.<br><br>The amount a client pays will depend on whether they’re drawing down on their pension, or still accumulating assets." id="button" class="tooltip" aria-describedby="tooltip"></span>
+      </label>
+      <div class="flex flex-wrap justify-between">
+        <span class="f7 w-50">Would you be offering a pension?</span>
+        <div class="onoffswitch self-start">
+          <!-- Toggle 2 - Pension -->
+          <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="switchPensions">
+          <label class="onoffswitch-label" for="switchPensions"></label>
+        </div>
+      </div>
+      <div id="Pensions">
+        <div class="flex flex-wrap justify-between mt4">
+          <span class="f7 w-50">Good to know. Roughly what proportion of clients will have one, do you think?</span>
+          <!-- Input 3 - Pension -->
+          <span class="label3 items f7"><input type="text" id="input3" min="0" max="100" maxlength="3" value="0"> %</input></span>
+          <!-- Field 3 - Pension -->
+          <input class="w-100" id="field3" name="field3" type="range"  step="5" min="0" max="100"  value="0" data-rangeslider>
+          <div class="slider-scale w-100 flex justify-between">
+            <span class="f7">0%</span>
+            <span class="f7">100%</span>
+          </div>
+        </div>
+        <div class="flex flex-wrap justify-between mt4">
+          <span class="f7 w-50">And roughly how many of those will be in decumulation?</span>
+          <!-- Input 4 - Decumulation -->
+          <span class="label4 items f7"><input type="text" id="input4" min="0" max="100" maxlength="3" value="0"> %</input></span>
+          <!-- Field 4 - Decumulation -->
+          <input class="w-100" id="field4" name="field4" type="range" step="5" min="0" max="100" value="0" data-rangeslider>
+          <div class="slider-scale w-100 flex justify-between">
+            <span class="f7">0%</span>
+            <span class="f7">100%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-100 flex flex-column mb3 form-group pb3">
+      <label for="{{ .title }}" class="mb2">Instruments
+        <span data-tippy-content="To clarify, we mean at a firm level; so make sure you don't double count the same instruments used by different clients!" id="button" class="tooltip" aria-describedby="tooltip"></span>
+      </label>
+      <div class="flex flex-wrap justify-between">
+        <span class="f7 w-50">Roughly how many unique instruments would you be looking to make available?</span>
+        <!-- Input 5 - Instruments -->
+        <span class="label5 items"><input type="text" id="input5" min="0" max="100" maxlength="3" value="0"></input></span>
+        <!-- Field 5 - Instruments -->
+        <input class="w-100" id="field5" name="field5" type="range" step="5" min="0" max="100" value="0" data-rangeslider>
+        <div class="slider-scale w-100 flex justify-between">
+          <span class="f7">0</span>
+          <span class="f7">100</span>
+        </div>
+      </div>
+    </div>
+    <div class="w-100 flex flex-column mb3 form-group pb3">
+      <label for="{{ .title }}" class="mb2">Transfers
+        <span data-tippy-content="There are costs involved with transferring a client's assets, which don't apply if they're simply growing their portfolio with you from scratch." id="button" class="tooltip" aria-describedby="tooltip"></span>
+      </label>
+      <div class="flex flex-wrap justify-between">
+        <span class="f7 w-50">And finally, will some of the customers you've told us about have existing assets that you'll want to transfer across?</span>
+        <div class="onoffswitch self-start">
+          <!-- Toggle 3 - Transfers -->
+          <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="switchTransfers">
+          <label class="onoffswitch-label" for="switchTransfers"></label>
+        </div>
+      </div>
+      <div class="flex flex-wrap justify-between mt4" id="TransferProportion">
+        <span class="f7 w-50">Ok — roughly what proportion of your target customer base, do you think?</span>
+        <!-- Input 6 - Transfers -->
+        <span class="label6 items f7"><input type="text" id="input6" min="0" max="100" maxlength="3" value="0"> %</input></span>
+        <!-- Field 6 - Transfers -->
+        <input class="w-100" id="field6" name="field6" type="range" step="5" min="0" max="100" value="0" data-rangeslider>
+        <div class="slider-scale w-100 flex justify-between">
+          <span class="f7">0%</span>
+          <span class="f7">100%</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-column">
+      <div class="flex center justify-center mt3">
+          <button class="btn" id="calculate-settlement">Calculate</button>
+      </div>
+
+      <div id="EstimateResult" class="mt4">
+        <div class="bg-grey-1 pa3 br1">
+        <h3 class="f5 pb3 mt3 lh-title tc-m b db">
+            A rough breakdown of the costs...
+        </h3>
+
+              <ul class="pricing-totals flex flex-column justify-between">
+                <li class="flex justify-between">
+                  <span class="b">Seccl charges</span>
+                  <label class="b tr f7" for="secclCharges" id="secclCharges"></label>
+                </li>
+                <li class="indent">
+                  <span>Custody (assuming 0.1% of total AUM for ease – or an annual minimum of £36k)</span>
+                  <label class="l tr f7" for="custodyCharge" id="custodyCharge"></label>
+                </li>
+                <li class="indent">
+                  <span>User interfaces (at £12+VAT per user per year – or an annual minimum of £36k+VAT)</span>
+                  <label class="l tr f7" for="userInterfaces" id="userInterfaces"></label>
+                </li>
+                <li>
+                  <span class="b">Variable or third-party costs, recharged to you</span>
+                  <label class="tr f7" for="variableCharges" id="variableCharges"></label>
+                </li>
+                <li class="indent">
+                  <span>One-off cost for initial transfers (assuming £25 per client, or £50 for pension clients)</span>
+                  <label class="l tr f7" for="transfers" id="transfers"></label>
+                </li>
+                <li class="indent">
+                  <span>SIPPs (at £50+VAT for accumulation and £175+VAT for decumulation)</span>
+                  <label class="l tr f7" for="pensionCharges" id="pensionCharges"></label>
+                </li>
+                <li class="indent">
+                  <span>Instruments (at £36.50 per line per year)</span>
+                  <label class="l tr f7" for="instruments" id="instruments"></label>
+                </li>
+                <li class="indent">
+                  <span>Trading costs (assuming 0.0015% of AUM per month)</span>
+                  <label class="l tr f7" for="trading" id="trading"></label>
+                </li>
+                <li class="indent">
+                  <span>Direct debits (assuming 50% of the clients have one DD per month)</span>
+                  <label class="l tr f7" for="directDebits" id="directDebits"></label>
+                </li>
+                <li>
+                  <span class="b">Total</span>
+                  <label class="tr f7" for="estOperatingCost" id="estOperatingCost"></label>
+                </li>
+              </ul>
+
+              <form id="calculator-form" action="/calculator-estimate" name="calculator" method="POST" data-netlify="true" class="modal">
+              <div class="mv2">
+              <h3 class="f5 pb3 lh-title tc-m b db">
+                  Where shall we send it?
+              </h3>
+              <p class="f7">Just let us know your name and email and we’ll send your estimate over to you.</p>
+              <fieldset>
+                <div class="flex flex-wrap justify-center">
+                  <label for="Firstname" class="white o-0 w0 absolute db mt-3">First name</label>
+                  <input id="Firstname" type="text" name="Firstname" placeholder="First name" required class="w-100 mb3">
+                  <label for="Lastname" class="white o-0 w0 absolute db mt-3">Last name</label>
+                  <input id="Lastname" type="text" name="Lastname" placeholder="Last name" required class="w-100 mb3">
+                  <label for="email" class="white o-0 w0 absolute db mt-3">email</label>
+                  <input id="email" type="email" name="email" placeholder="Email" required class="w-100">
+
+                  <div class="flex mv3 flex-wrap flex-row-ns items-center">
+                    <label for="message" class="f7 w-50 w-50-ns flex-2">Is it OK if we email you every now and then with news and updates you might be interested in? You can always unsubscribe later if you like.</label>
+                    <div class="w-50 w-15-ns self-end flex justify-center flex-1 mb3">
+                      <fieldset>
+                          <input type="radio" name="GDPR" id="GDPR_no" value="No" name="groupname" required>
+                          <label for="GDPR_no" class="mr3 radio">
+                            No
+                          </label>
+                          <input type="radio" name="GDPR" id="GDPR_yes" value="Yes" name="groupname" required>
+                          <label for="GDPR_yes" class="radio">
+                            Yes
+                          </label>
+                      </fieldset>
+                    </div>
+                  </div>
+
+                  <button class="btn db mt3" type="submit">Submit</button>
+                </div>
+              </fieldset>
+
+              <div class="dn">
+                <input type="text" id="aum_expected" name="aum_expected" value="0">
+                <input type="text" id="clients_expected" name="clients_expected" value="0">
+                <input type="text" id="ui_prospect" name="ui_prospect" value="No">
+                <input type="text" id="sipp_proportion_expected" name="sipp_proportion_expected" value="0">
+                <input type="text" id="decumulation_proportion_expected" name="decumulation_proportion_expected" value="0">
+                <input type="text" id="transfer_proportion_expected" name="transfer_proportion_expected" value="0">
+                <input type="text" id="instrument_number_expected" name="instrument_number_expected" value="0">
+                <input type="text" id="output-secclCharges" name="output-secclCharges" value="0">
+                <input type="text" id="custody_charge_estimate" name="custody_charge_estimate" value="0">
+                <input type="text" id="ui_charge_estimate" name="ui_charge_estimate" value="">
+                <input type="text" id="output-variableCharges" name="output-variableCharges" value="0">
+                <input type="text" id="transfer_charge_estimate" name="transfer_charge_estimate" value="0">
+                <input type="text" id="pension_charge_estimate" name="pension_charge_estimate" value="0">
+                <input type="text" id="instrument_charge_estimate" name="instrument_charge_estimate" value="0">
+                <input type="text" id="trading_charge_estimate" name="trading_charge_estimate" value="0">
+                <input type="text" id="dd_charge_estimate" name="dd_charge_estimate" value="0">
+                <input type="text" id="total_estimated_charges" name="total_estimated_charges" value="0">
+              </div>
+
+              </div>
+            </form>
+
+              <div class="flex justify-center mt4 mb3">
+                <a href="#calculator-form" rel="modal:open">
+                  <button class="btn btn-tertiary">Send me this estimate</button>
+                </a>
+              </div>
+
+              </div>
+
+          <div class="mt4">
+            <h3 class="f5 pv3 lh-title tc-m b">
+              It's important to understand...
+            </h3>
+            <div class="flex flex-column flex-row-ns justify-between items-center">
+              <span class="w-100 w-60-m f7 db">
+                <p>This calculator doesn't account for the operational cost involved with running your own investment platform.</p>
+                <p> It's a significant step that will carry certain new and perhaps unfamiliar roles and responsibilities – and will no doubt mean you'll have to hire new administrative, operations or customer service staff.</p>
+                <p>To learn more about what's involved, take a look at our introductory guide...</p>
+              </span>
+              <span class="w-100 w-40-m guide db pl3 pl0-ns">
+                <a href="https://cdn2.hubspot.net/hubfs/6245974/Literature/Operating%20your%20own%20platform.pdf" rel=“noreferrer”>
+                  <picture>
+                    <source data-srcset="/img/guide.webp" type="image/webp">
+                    <source data-srcset="/img/guide.png" type="image/jpeg">
+                    <img data-src="/img/guide.png" alt="Operating your own platform guide" class="img-auto lazyload">
+                    </picture>
+                </a>
+              </span>
+            </div>
+            <div class="flex center justify-center">
+              <a href="https://cdn2.h ubspot.net/hubfs/6245974/Literature/Operating%20your%20own%20platform.pdf" rel=“noreferrer”>
+              <button class="btn">Read the guide</button>
+              </a>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

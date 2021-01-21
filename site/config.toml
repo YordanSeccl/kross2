@@ -1,0 +1,28 @@
+baseurl = "https://seccl.tech/"
+languageCode = "en-us"
+languageLang = "en"
+title = "Homepage"
+
+# RSS, categories and tags disabled for an easy start
+# See configuration options for more details:
+# https://gohugo.io/getting-started/configuration/#toml-configuration
+# disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
+
+# disableKinds = ["taxonomyTerm"]
+
+[taxonomies]
+  author = "authors"
+  category = "categories"
+
+  # Related content settings
+  [related]
+      threshold = 1
+      includeNewer = true
+      toLower = false
+
+      [[related.indices]]
+          name = "categories"
+          weight = 1
+
+[markup]
+  defaultMarkdownHandler = "blackfriday"

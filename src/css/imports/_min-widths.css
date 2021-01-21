@@ -1,0 +1,9 @@
+.minw-170 { min-width: 120px; }
+@media (--breakpoint-not-small) {
+  .minw-170 { min-width: 170px; }
+  .minw-150 { min-width: 150px; }
+}
+
+.minw1 { min-width: 1rem; }
+.minw2 { min-width: 2rem; }
+.minw6 { min-width: 6rem; }

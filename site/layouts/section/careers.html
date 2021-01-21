@@ -1,0 +1,48 @@
+
+{{ define "main" }}
+{{ partial "jumbotron-careers" (dict "title" .Params.title "subtitle" .Params.subtitle ) }}
+
+<section class="pt4 pt5-m">
+  {{ partial "swiper" .Params.section1 }}
+</section>
+
+<section class="grad-m pv4 pv5-m {{.Params.section0.backgroundstyle}}">
+  {{ partial "text-list-and-image-left" .Params.section0 }}
+</section>
+
+<section class="pt4 pt5-m">
+  {{ partial "title-paragraph-2-up" .Params.section4 }}
+</section>
+
+<section class="pv4 pt5-m pb3-m" id="howwework">
+  {{ partial "title-subtitle-center" .Params.section3 }}
+</section>
+
+<section>
+    {{ partial "2-up" .Params.section2 }}
+</section>
+
+{{ if (.Pages) }}
+<section class="grad-m pv3" id="latestroles">
+  <div class="mw7 center pv4 ph3">
+    <h1 class="f3 tc l lh-title mb2">Latest roles</h1>
+    <ul class="flex-ns flex-wrap justify-between mhn1-ns">
+        {{ range (.Paginator).Pages.ByPublishDate.Reverse }}
+            <div class="w-49-ns w-32-m flex">
+              {{ .Render "job-post"}}
+            </div>
+        {{ end }}
+    </ul>
+    {{ partial "pagination" . }}
+  </div>
+  {{ else}}
+  {{ partial "title-subtitle-left" .Params.nopositionsnotice }}
+  {{ end }}
+</section>
+
+<section class="pb5 grad-m ph3">
+  {{ partial "newsletter-form" .Params }}
+</section>
+
+{{end}}
+

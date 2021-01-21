@@ -1,0 +1,221 @@
+
+@font-face {
+  font-family: 'AvenirNext';
+  src: url("/fonts/avenirNext/AvenirNext-Regular.eot");
+  src: url("/fonts/avenirNext/AvenirNext-Regular.eot?#iefix") format("embedded-opentype"), url("/fonts/avenirNext/AvenirNext-Regular.woff2") format("woff2"), url("/fonts/avenirNext/AvenirNext-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: 'AvenirNext';
+  src: url("/fonts/avenirNext/AvenirNext-Medium.eot");
+  src: url("/fonts/avenirNext/AvenirNext-Medium.eot?#iefix") format("embedded-opentype"), url("/fonts/avenirNext/AvenirNext-Medium.woff2") format("woff2"), url("/fonts/avenirNext/AvenirNext-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AvenirNext';
+  src: url("/fonts/avenirNext/AvenirNext-DemiBold.eot");
+  src: url("/fonts/avenirNext/AvenirNext-DemiBold.eot?#iefix") format("embedded-opentype"), url("/fonts/avenirNext/AvenirNext-DemiBold.woff2") format("woff2"), url("/fonts/avenirNext/AvenirNext-DemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AvenirNext';
+  src: url("/fonts/avenirNext/AvenirNext-Regular-Italic.eot");
+  src: url("/fonts/avenirNext/AvenirNext-Regular-Italic.eot?#iefix") format("embedded-opentype"), url("/fonts/avenirNext/AvenirNext-Regular-Italic.woff2") format("woff2"), url("/fonts/avenirNext/AvenirNext-Regular-Italic.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'CoHeadline';
+  src: url("/fonts/coheadline/CoHeadline-Light.eot");
+  src: url("/fonts/coheadline/CoHeadline-Light.eot?#iefix") format("embedded-opentype"), url("/fonts/coheadline/CoHeadline-Light.woff2") format("woff2"), url("/fonts/coheadline/CoHeadline-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CoHeadline';
+  src: url("/fonts/coheadline/CoHeadline-Regular.eot");
+  src: url("/fonts/coheadline/CoHeadline-Regular.eot?#iefix") format("embedded-opentype"), url("/fonts/coheadline/CoHeadline-Regular.woff2") format("woff2"), url("/fonts/coheadline/CoHeadline-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CoHeadline';
+  src: url("/fonts/coheadline/CoHeadline-Bold.eot");
+  src: url("/fonts/coheadline/CoHeadline-Bold.eot?#iefix") format("embedded-opentype"), url("/fonts/coheadline/CoHeadline-Bold.woff2") format("woff2"), url("/fonts/coheadline/CoHeadline-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+} 
+
+html {
+  color: var(--black);
+  font-size: var(--font-size);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @media (--breakpoint-medium) {
+    font-size: var(--font-size-m);
+  }
+  @media (--breakpoint-large) {
+    font-size: var(--font-size-l);
+  }
+  background-color: var(--white);
+}
+
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--spacing-medium);
+  line-height: var(--line-height);
+  font-weight: var(--body-font-weight);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--off-white);
+ }
+
+.font-primary {
+  font-family: var(--font-primary);
+}
+
+.font-secondary {
+  font-family: var(--font-secondary);
+}
+
+p {
+  margin-bottom: var(--spacing-medium);
+  font-family: Var(--font-family);
+}
+
+strong {
+  font-weight: var(--bold-font-weight);
+}
+
+em {
+  font-style: italic;
+}
+
+sup {
+  font-size: .6rem;
+  font-weight: 700;
+  vertical-align: super;
+}
+
+h1, h2 {
+  font-family: Var(--font-primary);
+}
+
+/* Measure is limited to ~66 characters */
+.measure {
+  max-width: 30em;
+}
+
+/* Measure is limited to ~80 characters */
+.measure-wide {
+  max-width: 34em;
+}
+
+/* Measure is limited to ~45 characters */
+.measure-narrow {
+  max-width: 25em;
+}
+
+/* Book paragraph style - paragraphs are indented with no vertical spacing. */
+.indent {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 10px !important;
+}
+
+.small-caps {
+  font-variant: small-caps;
+}
+
+/* Combine this class with a width to truncate text (or just leave as is to truncate at width of containing element. */
+
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (--breakpoint-not-small) {
+  .measure-ns  {
+    max-width: 30em;
+  }
+  .measure-wide-ns {
+    max-width: 34em;
+  }
+  .measure-narrow-ns {
+    max-width: 20em;
+  }
+  .indent-ns {
+    text-indent: 1em;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .small-caps-ns {
+    font-variant: small-caps;
+  }
+  .truncate-ns {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+@media (--breakpoint-medium) {
+  .measure-m {
+    max-width: 30em;
+  }
+  .measure-wide-m {
+    max-width: 34em;
+  }
+  .measure-narrow-m {
+    max-width: 20em;
+  }
+  .indent-m {
+    text-indent: 1em;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .small-caps-m {
+    font-variant: small-caps;
+  }
+  .truncate-m {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+@media (--breakpoint-large) {
+  .measure-l {
+    max-width: 30em;
+  }
+  .measure-wide-l {
+    max-width: 34em;
+  }
+  .measure-narrow-l {
+    max-width: 20em;
+  }
+  .indent-l {
+    text-indent: 1em;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .small-caps-l {
+    font-variant: small-caps;
+  }
+  .truncate-l {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

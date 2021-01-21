@@ -1,0 +1,30 @@
+<div id="{{.servicesintro.id}}" class="services relative">
+  <div class="mw7 center ph3">
+    <h2 class="f3 lh-title mb2 l pb3 tc">{{.servicesintro.heading}}</h2>
+    <div class="service-container flex flex-wrap flex-wrap-mi justify-between mhn2-ns mb3">
+      {{ range .services}}
+      <div class="w-100 w-47-m service shadow-1 br1 relative flex items-center flex-column-m pa3">
+        <div class="service-image pl3 pl0-m order-1 order-0-m">
+          <picture>
+            <source data-srcset="{{.imagewebp}}" type="image/webp">
+            <source data-srcset="{{.image}}" type="image/jpeg"> 
+            <img data-src="{{.image}}" alt="{{.alt}}" class="img-auto lazyload">
+          </picture>
+        </div>
+        <div>
+          <h3 class="f5 pb3 lh-title tc-m order-0 order-1-m b">{{.heading}}</h3>
+          <p class="f6 tc-m ma0">{{.text}}</p>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+    <div class="shadow-1 br1 pa3">
+      <h3 class="f5 pb3 lh-title tc-m b">{{.services2.heading}}</h3>
+      <p class="f6 tc-m">{{.services2.text}}</p>
+      <div class="flex flex-wrap justify-between justify-center-ns">
+        <a href="{{ "/how/" | relURL }}"><button class="btn mb2">How it works</button></a>
+        <a href="{{ "/platform/" | relURL }}"><button class="btn btn-tertiary ml3-ns mb2">Features and functionality</button></a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+.video-intro {
+  background-size: 101%;
+  transition: background-size 0.2s ease-out;
+}
+.video-intro:hover {
+  background-size: 105%;
+}

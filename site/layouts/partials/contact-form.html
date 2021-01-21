@@ -1,0 +1,73 @@
+<!-- Contact -->
+<div class="contact-form">
+  <form action="/thankyou" name="contact" method="POST" data-netlify="true">
+    <div class="flex flex-wrap flex-row-ns justify-end">
+      <div class="w-100">
+        <fieldset>
+          <div class="flex flex-column flex-row-ns mb3">
+            <label for="firstname" class="w-100 w-30-ns db">First name</label>
+            <input type="text" id="firstname" name="Firstname" required placeholder="John" class="w-100 w-70-ns">
+          </div>
+          <div class="flex flex-column flex-row-ns mb3">
+            <label for="lastname" class="w-100 w-30-ns db">Last name</label>
+            <input type="text" id="lastname" name="Lastname" required placeholder="Smith" class="w-100 w-70-ns">
+          </div>
+          <div class="flex flex-column flex-row-ns mb3">
+            <label for="email" class="w-100 w-30-ns db">Email</label>
+            <input type="email" id="email" required name="Email" placeholder="john.smith@examplefirm.co.uk" class="w-100 w-70-ns">
+          </div>
+          <div class="flex flex-column flex-row-ns mb3">
+            <label for="phonenumber" class="w-100 w-30-ns db">Phone number</label>
+            <input id="phonenumber" type="number" required name="Phonenumber" placeholder="07123456789" class="w-100 w-70-ns">
+          </div>
+          <div class="flex flex-column flex-row-ns mb3 select-css-wrapper relative">
+            <label for="company_type" class="w-100 w-30-ns db">Company type</label>
+            <select class="select-css w-100 w-70-ns" id="company_type" name="What type of company are you?" required placeholder="What type of company are you?">
+              <option value="" disabled selected>What type of company are you?</option>
+              <option value="Investment manager">Investment manager</option>
+              <option value="Financial adviser">Financial adviser</option>
+              <option value="Wealth manager">Wealth manager</option>
+              <option value="Fintech">Fintech</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="flex flex-column flex-row-ns mb3 select-css-wrapper relative">
+            <label for="attribution" class="w-100 w-30-ns db">Discovery</label>
+            <select class="select-css w-100 w-70-ns" id="attribution" name="How did you hear about us?" required placeholder="How did you hear about us?">
+              <option value="" disabled selected>How did you hear about us?</option>
+              <option value="News article">News article</option>
+              <option value="AltFi Digial Wealth Report">AltFi Digial Wealth Report</option>
+              <option value="Search engine">Search engine</option>
+              <option value="Event">Event</option>
+              <option value="Word of mouth">Word of mouth</option>
+              <option value="Referral">Referral</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="flex flex-column flex-row-ns mb3">
+            <label for="message" class="w-100 w-30-ns db">Your message</label>
+            <textarea id="message" name="Message" required placeholder="Anything we should know?" rows="8" cols="80" class="w-100 w-70-ns"></textarea>
+          </div>
+          <div class="flex mv3 flex-wrap flex-row-ns items-center">
+            <div class="dn db-ns w-100 w-30-ns"></div>
+            <label for="message" class="f7 w-50 w-50-ns flex-2">Is it OK if we email you every now and then with news and updates you might be interested in? You can always unsubscribe later if you like.</label>
+            <div class="w-50 w-15-ns self-end flex justify-center flex-1 mb3">
+              <fieldset>
+                  <input type="radio" name="GDPR" id="GDPR_no" value="No" name="groupname" required>
+                  <label for="GDPR_no" class="mr3 radio">
+                    No
+                  </label>
+                  <input type="radio" name="GDPR" id="GDPR_yes" value="Yes" name="groupname" required>
+                  <label for="GDPR_yes" class="radio">
+                    Yes
+                  </label>
+              </fieldset>
+            </div>
+          </div>
+        <div class="w-100 tc pt2 flex justify-center">
+          <button type="submit" value="Send" class="btn w-100 w-auto-ns raise">Submit</button>
+        </div>
+      </fieldset>
+    </div>
+  </form>
+</div>

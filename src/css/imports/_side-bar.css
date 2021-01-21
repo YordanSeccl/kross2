@@ -1,0 +1,12 @@
+
+@media (--breakpoint-medium) {
+  .side-bar {
+    position: sticky;
+    top: var(--top-bar-height);
+    
+    /* & li:not(:first-of-type) {
+      border-top: 1px solid var(--black-alpha-1);
+    } */
+  }
+}
+

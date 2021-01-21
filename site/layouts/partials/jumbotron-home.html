@@ -1,0 +1,22 @@
+<div class="pt6 pb4 pb5-ns pb6-m bg-bottom relative overflow-hidden home curve-in">
+  <div class="mw7 center ph3">
+    <div class="w-60-ns">
+      <div class="relative tl mb3">
+        <h1 class="f2 l di lh-title mb3 white mw6">
+          {{.title | safeHTML}}
+        </h1>
+      </div>
+      {{ if .subtitle }}
+      <div class="mw7 relative">
+        <p class="f5 di db lh-title mb4 white secondary">
+          {{.subtitle | safeHTML}}
+        </p>
+      </div>
+      {{ end }}
+      <div class="flex relative pt2">
+        <a href="{{ "/how/" | relURL }}"><button class="btn btn-tertiary mr3">Learn more about Seccl</button></a>
+        <a href="{{ "/contact/" | relURL }}"><button class="btn">Get a demo</button></a>
+      </div>
+    </div>
+  </div>
+</div>

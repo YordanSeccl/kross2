@@ -1,0 +1,85 @@
+:root {
+	/* Colors */
+	--primary: rgba(122, 198, 200, 1);
+	--primary-tint: rgba(122, 198, 200, 0.2);
+	--secondary: rgba(75, 188, 223, 1);
+	--secondary-tint: rgba(75, 188, 223, 0.2);
+	--secondary-light: #dbf2f9;
+	--tertiary: rgba(24, 10, 56, 1);
+	--tertiary-alpha: rgba(24, 10, 56, 0.1);
+	--tertiary-tint: rgba(31, 61, 136, 1);
+
+	--highlight: rgba(233, 248, 249, 1);
+	--white: rgba(255, 255, 255, 1);
+	--white-alpha-80: rgba(255, 255, 255, .8);
+	--white-alpha-60: rgba(255, 255, 255, .6);
+	--white-alpha-30: rgba(255, 255, 255, .3);
+	--white-alpha-10: rgba(255, 255, 255, .1);
+	--pink: rgba(228, 19, 65, 1);
+	--dark-pink: rgba(177, 33, 57, 1);
+	--off-white: rgba(255, 253, 252, 1);
+	--grey-1: rgba(245, 243, 242, 1);
+	--grey-2: rgba(235, 231, 230, 1);
+	--grey-3: rgba(190,190, 190, 1);
+	--grey-4: rgba(64, 64, 64, 1);
+	--black: rgba(58, 58, 58, 1);
+	--transparent: rgba(255, 255, 255, 0);
+	--black-alpha-1: rgba(0, 0, 0, 0.05);
+	--black-alpha-2: rgba(0, 0, 0, 0.2);
+	--black-alpha-3: rgba(0, 0, 0, 0.3);
+	
+	--orange: #e55a0e;
+	--light-orange: #f6a672;
+	--bright-yellow: #ffd100;
+	--green: #7ed321;
+	--green-tint: #5FA118;
+	
+	--category-all: rgb(57, 57, 58, 1);
+	--category-all-alpha: rgb(57, 57, 58, 0.1);
+	--category-product: rgba(228, 19, 65, 1);
+	--category-product-alpha: rgba(228, 19, 65, 0.1);
+	--category-engineering: rgb(45, 48, 71, 1);
+	--category-engineering-alpha: rgb(45, 48, 71, 0.1);
+	--category-culture: rgba(75, 134, 144, 1);
+	--category-culture-alpha: rgba(75, 134, 144, 0.1);
+	--category-team: rgba(24, 10, 56, 1);
+	--category-team-alpha: rgba(24, 10, 56, 0.1);
+	--category-growth: rgba(75, 188, 223, 1);
+	--category-growth-alpha: rgb(75, 188, 223, 0.1);
+	
+	/* Typography */
+
+	--font-family: Avenir, "AvenirNext", "Segoe UI", Helvetica, Arial, sans-serif;
+	--font-primary:  CoHeadline, "CoHeadline", "sans-serif";
+	--font-secondary: Avenir, "AvenirNext", "Segoe UI", Helvetica, Arial, sans-serif;
+	--line-height: 1.5;
+
+	--font-size: 18px;
+	--font-size-m: 18px;
+	--font-size-l: 20px;
+
+	--light-font-weight: 300;
+	--body-font-weight: 400;
+	--bold-font-weight: 700;
+
+	/* Sizing */
+	--spacing-none: 0;
+	--spacing-extra-small: .25rem;
+	--spacing-small: .5rem;
+	--spacing-small-medium: .75rem;
+	--spacing-medium: 1rem;
+	--spacing-large: 2rem;
+	--spacing-extra-large: 4rem;
+	--spacing-extra-extra-large: 8rem;
+	--spacing-extra-extra-extra-large: 10rem;
+	--spacing-extra-extra-extra-extra-large: 12rem;
+
+	/* Miscelaneous */
+	--max-border-radius: 100%;
+	--border-radius: .25rem;
+	--hover-transition: all 500ms ease;
+	
+	--navigation-height: 106px;
+	--banner-height: 40px;
+	--top-bar-height: 106px;
+}

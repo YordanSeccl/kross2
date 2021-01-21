@@ -1,0 +1,31 @@
+{{ define "main" }}
+  
+{{ partial "jumbotron-home" (dict "title" .Title "subtitle" .Params.subtitle "context" . "params" .Site.Params) }}
+
+<section class="pv4">
+  {{ partial "3-up" .Params }}
+</section>
+
+<section class="pv4">
+  {{ partial "media-block" .Params }}
+</section>
+
+<section class="pv4 pt7-ns grad-m curve-out relative">
+  {{ partial "hp-text-list-and-image" .Params.empower }}
+</section>
+
+<section class="pv4 grad-m relative helping curve-in">
+  {{ partial "hp-text-list-and-backgroundimage" .Params.helping }}
+</section>
+  
+{{ partial "hp-text-list-and-image_02" .Params.octopus }}
+
+<section class="pt5">
+  {{ partial "2-up" .Params.help }}
+</section>
+
+<section class="curve-out relative mb5 ph3">
+  {{ partial "newsletter-form" .Params }}
+</section>
+
+{{ end }}

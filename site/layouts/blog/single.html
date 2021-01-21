@@ -1,0 +1,169 @@
+{{ define "main" }}
+
+<!-- page header  -->
+
+{{$cat := index (.Params.categories ) 0 }}
+{{$catbg := (print $cat "-background") }}
+
+<div class="flex relative overflow-hidden categories m-nav {{ $catbg }} aspect-ratio--header curve-out-center">
+  <div class="mw7 center pa3-ns flex flex-column flex-row-ns aspect-ratio--object-ns">
+    <div  class="w-100 order-1 order-0-ns">
+
+      <div class="w-100 w-60-ns h-100 pa3 pt0 pa0-ns flex flex-column justify-center-ns">
+        {{ $taxonomy := "categories" }}
+          {{ with .Param $taxonomy }}
+            <ul>
+              {{ range $index, $categories := . }}
+                {{ with $.Site.GetPage (printf "/%s/%s" $taxonomy $categories) -}}
+                  <li>
+                    <!-- <a href="{{ .Permalink }}" class="link-white"> -->
+                      <h4 class="f8 b white ttu mb2 categories category-tag-reverse self-start">{{ $categories | urlize }}</h4>
+                    <!-- </a> -->
+                  </li>
+                {{- end -}}
+              {{- end -}}
+            </ul>
+          {{ end }}
+
+
+        <h1 class="f2 l db lh-title mb3 mw5-5 white">{{ .Params.title | safeHTML }}</h1>
+        {{- range .Params.authors }}
+        {{- with $.Site.GetPage "taxonomyTerm" (printf "authors/%s" (urlize .)) }}
+          <figure class="author flex items-center">
+            <a href="{{ .Permalink }}">
+              <div class="fade-wrapper-small">
+                <div class="fade-image">
+                  <picture class="bottom">
+                    <source data-srcset="{{.Params.photo}}" type="image/jpeg">
+                    <img data-src="{{.Params.photo}}" alt="{{.Params.photoalt}}" class="lazyload">
+                  </picture>
+                  <!-- <picture class="top">
+                    <source data-srcset="{{.Params.photosecondary}}" type="image/jpeg">
+                    <img data-src="{{.Params.photo}}" alt="{{.Params.photoalt}}" class="lazyload">
+                  </picture> -->
+                </div>
+              </div>
+            </a>
+            <div class="flex flex-column pl3">
+              <figcaption>
+                <a href="{{ .Permalink }}"><span class="link-white">{{ .Params.name }}</span></a>
+              </figcaption>
+              {{ end }}
+              {{ end }}
+              <div>
+                <p class="f7 white ma0">{{ .Date.Format "Jan 2, 2006" }} | Read in {{ .ReadingTime }} minutes</p>
+              </div>
+            </div>
+          </figure>
+      </div>
+
+
+
+    </div>
+
+
+    <div class="absolute-ns w-100 w-60-ns r-20-p bottom-0 order-0 order-1-ns">
+      <div class="overflow-hidden relative top-25 aspect-ratio--16x9-ns">{{ if .Params.image }}
+        <div class="aspect-ratio--object-ns img-blog-header-ns">
+          <img src="{{ .Params.image }}" alt="{{ .Title }}" class="img-auto img-auto-h-ns" />{{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- page header ends  -->
+
+<!-- main page content -->
+
+<div class="flex flex-column flex-row-ns center mw7 pv3 pv4-ns ph3">
+
+<!-- share bar -->
+  <div class="mw3-m minw6 order-1 order-0-ns">
+    {{ partial "share-bar" (dict "title" .Params.title  "subtitle" .Params.description "shareUrl" .Permalink "fbAppId" "1183809118633408" ) }}
+  </div>
+
+
+  <div class="mw5-5-m order-0 order-1-ns">
+
+    <div class="cms">
+
+      {{ .Content }}
+    </div>
+
+    <!-- author -->
+
+    {{- range .Params.authors }}
+    {{- with $.Site.GetPage "taxonomyTerm" (printf "authors/%s" (urlize .)) }}
+    <div class="mv4">
+    <hr class="dark">
+      <figure class="author flex mt3">
+        <a href="{{ .Permalink }}">
+          <div class="fade-wrapper-small shadow-1">
+            <div class="fade-image">
+              <picture class="bottom">
+                <source data-srcset="{{.Params.photo}}" type="image/jpeg">
+                <img data-src="{{.Params.photo}}" alt="{{.Params.photoalt}}" class="lazyload">
+              </picture>
+              <!-- <picture class="top">
+                <source data-srcset="{{.Params.photosecondary}}" type="image/jpeg">
+                <img data-src="{{.Params.photo}}" alt="{{.Params.photoalt}}" class="lazyload">
+              </picture> -->
+            </div>
+          </div>
+        </a>
+        <div class="flex flex-column flex wrap pl3">
+          <figcaption>
+            <a href="{{ .Permalink }}">
+              <span class="link-black b">{{ .Params.name }}</span>
+            </a>
+          </figcaption>
+          <span class="black db f7">{{ .Content }}</span>
+          {{ end }}
+          {{ end }}
+        </div>
+      </figure>
+    <hr class="dark">
+    </div>
+
+
+    <!-- related articles -->
+
+    <h3 class="f5 b">More like this...</h3>
+
+      {{ $related := .Site.RegularPages.Related . | first 4  }}
+
+      {{ with $related }}
+
+      <ul class="flex flex-wrap justify-between mt3">
+        {{ range . }}
+        <li class="br1 shadow-1 pa2 w-100 w-48-ns raise mb3">
+          <a href="{{ .RelPermalink }}">
+            <div class="flex">
+              <div class="service-image pr2">
+                <picture>
+                  <source data-srcset="{{.Params.image}}" type="image/jpeg">
+                    <img data-src="{{.Params.image}}" alt="{{.Params.alt}}" class="img-auto lazyload">
+                  </picture>
+              </div>
+              <div class="pr2">
+                <h3 class="f7 b mb2">{{ .Title }}</h3>
+                <p class="f7 ma0">{{ .Date.Format "Jan 2, 2006" }} | Read in {{ .ReadingTime }} minutes</p>
+              </div>
+            </div>
+          </a>
+        </li>
+
+        {{ end }}
+      </ul>
+      {{ end }}
+
+
+
+    <div class="mv4">
+    {{ partial "newsletter-form" .Params }}
+    </div>
+  </div>
+</div>
+
+{{ end }}

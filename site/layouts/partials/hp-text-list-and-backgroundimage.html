@@ -1,0 +1,30 @@
+<div class="ph3 mw7 center flex">
+
+		<div class="w-40-m dn db-m"></div>
+		<div class="w-100 w-50-m">
+				<h2 class="f3 l lh-title mb2">{{.heading}}</h2>
+				<p class="f6">{{.text | safeHTML }}</p>
+				
+				<div class="center mb7-ns">
+					<ul class="pv3-m">
+						{{ range .list }}
+						<li class="tick pb3 f6">{{.text}}</li>
+						{{end }}
+					</ul>
+					
+					<div class="flex flex-wrap justify-between shadow-1 br1 pt3 pb2 ph3 bg-white">
+						{{ range .fintechs }}
+						<div class="w-100 w-30-ns item-data">
+							<picture class="flex justify-center w-100">
+								<source data-srcset="{{.logowebp}}" type="image/webp">
+								<source data-srcset="{{.logo}}" type="image/jpeg"> 
+								<img data-src="{{.logo}}" alt="{{.alt}}" class="logo-sm lazyload">
+							</picture>
+						</div>
+						{{end }}
+					</div>
+					<a href="{{ .ctaurl }}"{{ if eq .externallink true }} target="_blank" rel="noreferrer" {{ end }} class="center mv3"><button class="btn center mv4">{{ .buttontext }}</button></a>
+				</div>
+				
+		</div>	
+	</div>

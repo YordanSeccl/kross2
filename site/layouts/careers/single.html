@@ -1,0 +1,21 @@
+{{ define "main" }}
+{{ partial "jumbotron" (dict "title" .Params.title "subtitle" .Params.description ) }}
+
+<section class="grad-m pv4 pv5-m">
+  <div class="flex-ns flex-column-ns flex-row-m center mw7 pv4 ph3 justify-between-ns">
+    <div class="mw4-m">
+      {{ partial "side-bar" (dict "option0" "Back" "url" "/careers/" "icon0" "/img/icon-arrow-left.svg" "icon0alt" "back" "option1" .Params.location "icon1" "/img/icon-location.svg" "icon1alt" "location" "option2" .Params.contract "icon2" "/img/icon-time.svg" "icon2alt" "contract" ) }}
+    </div>
+    <div class="mw6-m">
+      <picture>
+        <source data-srcset="{{.Params.imagewebp}}" type="image/webp">
+        <source data-srcset="{{.Params.image}}" type="image/jpeg"> 
+        <img data-src="{{.Params.image}}" alt="{{.Title}}" class="img-auto lazyload">
+      </picture>
+      <div class="cms">
+        {{ .Content }}
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}

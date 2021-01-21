@@ -1,10 +1,7 @@
-Thumbs.db
+node_modules/
+dist/
+site/data/webpack.json
+/npm-debug.log
+yarn-error.log
 .DS_Store
-.dist
-.tmp
-.sass-cache
-npm-debug.log
-node_modules
-builds
-package-lock.json
-Public
+.idea/

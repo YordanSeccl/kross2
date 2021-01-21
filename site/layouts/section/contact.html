@@ -1,0 +1,17 @@
+{{ define "main" }}
+{{ partial "jumbotron" (dict "imageUrl" "/img/lines-contact-bg.png" "title" .Params.title "subtitle" .Params.subtitle ) }}
+<section class="bg-off-white pb4 ph3 pb5-m curve-in-light relative overflow-hidden">
+	<div class="relative pt2">
+		<div class="center bg-white mw5-5 pa3 shadow-1 br1 z-1 relative">
+			{{ partial "contact-form" . }}
+		</div>
+	</div>
+</section>
+
+<section class="grad-secondary-light pv4 pb5-m">
+	<div class="mw6 center">
+	  {{ partial "cta-block" .Params }}
+	</div>
+</section>
+
+{{ end }}

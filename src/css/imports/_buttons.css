@@ -1,0 +1,55 @@
+.btn {
+  display: block;
+  padding: 12px;
+  border-style: inset;
+  font-size: 16px;
+  font-family: var(--font-secondary);
+  line-height: 1.25;
+  background-color: var(--pink);
+  border-radius: 24px;
+  text-decoration: none;
+  font-weight: var(--body-font-weight);
+  color: var(--white);
+  text-align: center;
+  transition: var(--hover-transition);
+  min-width: 6rem;
+}
+
+.btn:hover {
+  background-color: var(--dark-pink);
+}
+
+.btn-tertiary {
+  background-color: var(--tertiary);
+}
+
+.btn-tertiary:hover {
+  background-color: var(--tertiary-tint);
+}
+
+.btn-positive {
+  background-color: var(--green);
+}
+.btn-positive:hover {
+  background-color: var(--green-tint);
+}
+
+.btn-white {
+  display: inline-block;
+  padding: 12px;
+  font-size: 16px;
+  font-family: var(--font-secondary);
+  line-height: 1.25;
+  background-color: var(--off-white);
+  border-radius: 24px;
+  text-decoration: none;
+  font-weight: var(--body-font-weight);
+  color: var(--black);
+  text-align: center;
+  transition: var(--hover-transition);
+}
+
+.btn-white:hover {
+  background-color: var(--white-alpha-30);
+  color: var(--white);
+}

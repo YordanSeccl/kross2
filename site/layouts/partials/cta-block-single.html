@@ -1,0 +1,27 @@
+<div class="center mw7 ph3">
+  {{ range .ctasingle }}
+  <div class="flex items-center flex-column flex-row-ns justify-center">
+    <div class="w-100 w-48-ns tl-ns flex items-center flex-column justify-between ph4">
+      <div class="relative mb2 pb2 tc">
+        <h2 class="f3 l di lh-title mb3 black">
+          {{ .heading }}
+        </h2>
+      </div>
+      {{ if .subheading }}
+      <div class="mw7 relative tc">
+        <p class="f5 di db lh-title mb3 black">
+          {{ .subheading }}
+        </p>
+      </div>
+      {{ end }}
+      {{ if .ctatext }}
+      <div class="pb4">
+        <a href="{{ .ctaurl | absURL }}">
+          <button class="btn {{ if eq .tertiary true }} btn btn-tertiary {{ end }} ">{{ .ctatext }}</button>
+        </a>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+    {{ end }}
+</div>

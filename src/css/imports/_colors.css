@@ -1,0 +1,315 @@
+/* Text colors */
+
+.primary {
+  color: var(--primary);
+}
+
+.secondary {
+  color: var(--secondary);
+}
+
+.highlight {
+  color: var(--highlight);
+}
+
+.white {
+  color: var(--white);
+}
+
+.off-white {
+  color: var(--off-white);
+}
+
+.grey-1 {
+  color: var(--grey-1);
+}
+
+.grey-2 {
+  color: var(--grey-2);
+}
+
+.grey-3 {
+  color: var(--grey-3);
+}
+
+.grey-4 {
+  color: var(--grey-4);
+}
+
+.black {
+  color: var(--black);
+}
+
+.bg-pink {
+  background-color: var(--pink);
+}
+
+.bg-primary {
+  background-color: var(--primary);
+}
+
+.bg-secondary {
+  background-color: var(--secondary);
+}
+
+.bg-tertiary {
+  background-color: var(--tertiary);
+}
+
+.bg-highlight {
+  background-color: var(--highlight);
+}
+
+.bg-white {
+  background-color: var(--white);
+}
+
+.bg-white-80 {
+  background-color: var(--white-alpha-80);
+}
+
+.bg-white-60 {
+  background-color: var(--white-alpha-60);
+}
+
+.bg-off-white {
+  background-color: var(--off-white);
+}
+
+.bg-grey-1 {
+  background-color: var(--grey-1);
+}
+
+.bg-grey-2 {
+  background-color: var(--grey-2);
+}
+
+.bg-grey-3 {
+  background-color: var(--grey-3);
+}
+
+.bg-grey-4 {
+  background-color: var(--grey-4);
+}
+
+.bg-black-10 {
+  background-color: var(--black-alpha-1);
+}
+.bg-black-20 {
+  background-color: var(--black-alpha-2);
+}
+
+.bg-black {
+  background-color: var(--black);
+}
+
+.bg-secondary-light {
+  background-color: var(--secondary-light);
+}
+
+.bg-authors {
+  background: linear-gradient(45deg, var(--primary) 30%, var(--secondary) 75%);
+}
+
+.bg-fix-primary {
+  padding: 0 var(--spacing-small);
+  & :first-child {
+    box-shadow: var(--spacing-small) 0 0 var(--primary), -var(--spacing-small) 0 0 var(--primary);
+  }
+}
+
+/* category background colors */
+ 
+.categories.product-background {
+  background: linear-gradient(45deg, var(--category-product) 30%, #ea5165 75%);
+}
+
+.categories.culture-background {
+  background: linear-gradient(45deg, var(--category-culture) 30%, #7bc6c7 75%);
+}
+
+.categories.team-background {
+  background: linear-gradient(45deg, rgba(24,10,56,1) 0%,rgba(53,24,105,1) 75%);
+}
+
+.categories.growth-background {
+  background: linear-gradient(45deg, var(--category-growth) 30%, rgba(122, 198, 200, 1) 75%);
+}
+
+.categories.engineering-background {
+  background: linear-gradient(45deg, var(--category-engineering) 30%, #525465 75%);
+}
+
+/* category tag colors */
+ 
+.categories {
+  background-color: var(--secondary);
+}
+ 
+.categories.product {
+  background-color: var(--category-product);
+}
+
+.categories.culture {
+  background-color: var(--category-culture);
+}
+
+.categories.team {
+  background-color: var(--category-team);
+}
+
+.categories.growth {
+  background-color: var(--category-growth);
+}
+
+.categories.engineering {
+  background-color: var(--category-engineering);
+}
+
+.categories.all {
+  background-color: var(--category-product);
+}
+
+.category-tag,
+.category-tag-reverse {
+  line-height: 1.4;
+  transition: all 0.5s ease;
+  border: 1px solid var(--black);
+  color: var(--black);
+  background-color: transparent;
+  display: inline-block;
+  border-radius: 30px;
+  padding: 2px 15px;
+}
+
+
+.filter .category-tag {
+  cursor: pointer;
+}
+
+.category-tag-reverse {
+  border: 1px solid var(--white);
+  color: var(--white);
+}
+
+.category-tag:hover {
+  background-color: var(--white) ;
+  color: var(--black);
+}
+
+.categories.all.category-tag {
+  background-color: var(--category-all-alpha);
+  color:var(--category-all);
+  border-color:var(--category-all);
+}
+
+/* --------------------- */
+
+.categories.product.category-tag {
+  background-color: var(--category-product-alpha);
+  color: var(--category-product);
+  border-color: var(--category-product);
+}
+
+.categories.culture.category-tag {
+  background-color: var(--category-culture-alpha);
+  color: var(--category-culture);
+  border-color: var(--category-culture);
+}
+
+.categories.team.category-tag {
+  background-color: var(--category-team-alpha);
+  color: var(--category-team);
+  border-color: var(--category-team);
+}
+
+.categories.growth.category-tag {
+  background-color: var(--category-growth-alpha);
+  color: var(--category-growth);
+  border-color: var(--category-growth);
+}
+
+.categories.engineering.category-tag {
+  background-color: var(--category-engineering-alpha);
+  color: var(--category-engineering);
+  border-color: var(--category-engineering);
+}
+
+/* --------------------- */
+
+.categories.category-tag:hover {
+  background-color: var(--black);
+  color: var(--white);
+  border-color: var(--black);
+}
+.categories.all.category-tag:hover {
+  background-color: var(--category-all);
+  color: var(--white);
+  border-color: var(--category-all);
+}
+
+.categories.product.category-tag:hover {
+  background-color: var(--category-product);
+  color: var(--white);
+  border-color: var(--category-product);
+}
+
+.categories.culture.category-tag:hover {
+  background-color: var(--category-culture);
+  color: var(--white);
+  border-color: var(--category-culture);
+}
+
+.categories.team.category-tag:hover {
+  background-color: var(--category-team);
+  color: var(--white);
+  border-color: var(--category-team);
+}
+
+.categories.growth.category-tag:hover {
+  background-color: var(--category-growth);
+  color: var(--white);
+  border-color: var(--category-growth);
+}
+
+.categories.engineering.category-tag:hover {
+  background-color: var(--category-engineering);
+  color: var(--white);
+  border-color: var(--category-engineering);
+}
+
+/* --------------------- */
+
+#all.category.selected::after{
+  background-color: var(--category-all);
+}
+
+#team.category.selected::after{
+  background-color: var(--category-team);
+}
+
+#product.category.selected::after{
+  background-color: var(--category-product);
+}
+
+#culture.category.selected::after{
+  background-color: var(--category-culture);
+}
+
+#growth.category.selected::after{
+  background-color: var(--category-growth);
+}
+
+#engineering.category.selected::after{
+  background-color: var(--category-engineering);
+}
+
+.category.selected::after {
+  content: '';
+  margin-top: 2px;
+  height: 3px;
+  border-radius: 2px;
+  width: 100%;
+  display: block;
+  background-color: inherit;
+}

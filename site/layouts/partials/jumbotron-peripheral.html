@@ -1,0 +1,27 @@
+<div class="pt6 pb4 bg-bottom curve-in-light relative overflow-hidden">
+  <div class="mw7 center ph3 z-1 relative">
+    <div class="w-60-ns center flex flex-column justify-center">
+      {{ if .image }}
+        <div class="w-60 center mt5">
+          <picture>
+  	        <source data-srcset="{{.imagewebp}}" type="image/webp">
+  	        <source data-srcset="{{.image}}" type="image/jpeg"> 
+  	        <img data-src="{{.image}}" alt="{{.alt}}" class="img-auto lazyload">
+  	      </picture>
+        </div>
+      {{ end }}
+      <div class="relative tc mv3">
+        <h1 class="f2 l di lh-title mb3 mw6">
+          {{.title | safeHTML}}
+        </h1>
+      </div>
+      {{ if .subtitle }}
+      <div class="mw7 relative tc">
+        <p class="f5 di db lh-title mb3">
+          {{.subtitle | safeHTML}}
+        </p>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</div>

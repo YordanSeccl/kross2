@@ -1,0 +1,58 @@
+<div class="center mw7 ph3 ">
+  <h2 class="f3 l lh-title mb2 black">{{ .sectionexpander.title }}</h2>
+  {{ if .sectionexpander.subtitle }}
+  <h3 class="f6 mb4 black l pb2">{{ .sectionexpander.subtitle }}</h3>
+  {{ end }}
+  {{ if .sectionexpander.leftcoltitle }}
+  <div class="flex flex-wrap">
+    <span class="db w-50">{{ .sectionexpander.leftcoltitle }}</span>
+    <span class="db w-50">{{ .sectionexpander.rightcoltitle }}</span>
+  </div>
+  {{ end }}
+  <ul>
+    <li>
+      {{ if eq .sectionexpander.bullet true }}
+      <ul class="w-100 flex flex-wrap">
+        {{ range .sectionexpander.expanders }}
+        <li class="w-100 flex flex-wrap exp exp-bullet">
+          <span class="w-50 db b pv3 f6">{{ .rowtitle }}</span>
+          <span class="flex-auto w-25 w-10-m db pv3 f7 brba tc">Seccl</span>
+          <span class="flex-auto w-25 pv3 f7 pl3 tc dn db-m">Platform operator</span>
+          <span class="flex-auto w-25 pv3 f7 pl3 tc dn-m">P/O</span>
+          <ul class="flex flex-wrap w-100">
+            {{ range .features }}
+            <li class="w-100 flex flex-wrap l exp-opt">
+              <span class="w-50 db b pa3 f7">{{ .featuretitle }}</span>
+                {{ if eq .seccl true | and ( eq .operator true) }}
+                <span class="flex-auto w-25 w-10-m db pv3 f6 flex justify-center items-center"><img src="/img/tick.svg"/></span>
+                <span class="flex-auto w-25 db pv3 f6 pl3 flex justify-center items-center"><img src="/img/tick-inverted.svg"/></span>
+                {{ else if eq .seccl true | and ( eq .operator false) }}
+                <span class="flex-auto w-25 w-10-m db pv3 f6 flex justify-center items-center"><img src="/img/tick.svg"/></span>
+                <span class="flex-auto w-25 db pv3 f6 pl3 flex justify-center items-center"></span>
+                {{ else if eq .seccl false | and ( eq .operator true) }}
+                <span class="flex-auto w-25 w-10-m db pv3 f6 flex justify-center items-center"></span>
+                <span class="flex-auto w-25 db pv3 f6 pl3 flex justify-center items-center"><img src="/img/tick-inverted.svg"/></span>
+                {{ end }}
+            </li>
+            {{ end }}
+          </ul>
+        </li>
+        {{ end }}
+      </ul>
+      {{ else }}
+      <ul class="w-100 flex flex-wrap">
+        {{ range .sectionexpander.expanders }}
+        <li class="w-100 exp">
+          <span class="db b pv3 f6">{{ .rowtitle }}</span>
+          <ul class="flex flex-wrap">
+            {{ range .features }}
+            <li class="w-50 f7 l exp-opt ph3 pv2">{{ .featuretitle }}</li>
+            {{ end }}
+          </ul>
+        </li>
+        {{ end }}
+      </ul>
+      {{ end }}
+    </li>
+  </ul>
+</div>

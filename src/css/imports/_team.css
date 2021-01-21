@@ -1,0 +1,19 @@
+.team-image {
+  width: 198px;
+  height: 198px;
+  overflow: hidden;
+  border-radius: 100%;
+  display: flex;
+}
+
+.team-image img{
+  width: 200px;
+  height: 200px;
+}
+
+@media (--breakpoint-not-small) {
+  .team-member:not(:last-of-type):not(:first-of-type) {
+    border-top: none;
+    border-bottom: none;
+  }
+}

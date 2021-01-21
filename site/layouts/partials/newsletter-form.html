@@ -1,0 +1,22 @@
+<div class="center mw6 flex align-center flex-column relative z-1">
+  <div class="br1 pa3 bg-black-10">
+    <h3 class="f5 b db lh-title center tc">
+      Stay in the loop
+    </h3>
+    <h3 class="f6 tc l mb3 mw6 center">
+      Want us to email you every now and then with news and updates you might be interested in? You can always unsubscribe later if you like.
+    </h3>
+
+    <div class="flex center z-1 w-100 justify-center">
+      <form action="/signup" name="newsletter" method="POST" data-netlify="true" class="w-100">
+        <fieldset name="newsletter" action="newsletter-subscribe">
+          <div class="flex justify-center">
+            <label for="email" class="white o-0 w0 absolute db mt-3">email</label>
+            <input id="email" type="email" name="email" placeholder="Email" required class="w-70">
+            <button class="btn db self-start ml3" type="submit">Sign up</button>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</div>

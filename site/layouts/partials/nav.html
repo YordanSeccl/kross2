@@ -1,0 +1,127 @@
+<nav class="w-100 z-max sticky top-40 {{ if eq (relURL .URL) ("/" | safeHTML) }}theme-light homepage{{else}}theme-dark{{ end }}">
+	
+	<div class="transparent">
+		<div class="w-100">
+			<div class="nav-banner white mw7 f7 hf1 tr w-100 center flex">
+				<a class="flex items-center justify-center ml3 pl0-ns mr3" href="https://octopusgroup.com">
+					<span class="din themed">part of</span>
+					<div class="octopus-logo br0 db mb0 w2 pl1 pt1p"></div>
+				</a>
+			</div>
+		</div>
+		<div class="mw7 flex justify-between items-center center hf2 relative">
+			
+			<!-- Logo -->
+			<a class="z-max pl3" href="{{ "/" | relURL }}" class="ml3 db mr4 w4 flex-none">
+				<div class="logo db w4"><span class="hidden">Seccl home page</span></div>
+			</a>
+
+			<div class="menu-container">
+        <div class="menu w-100 absolute top-0 left-0 pr2-m">
+                <ul class="flex items-center justify-end">
+									<li class="relative link option f6 l"><span>Services</span>
+						        <ul>
+											<div class="bp3-popover-arrow-container">
+												<div class="bp3-popover-arrow">
+													<svg viewBox="0 0 30 30">
+														<path class="bp3-popover-arrow-border" fill="000000" d="M8.11 6.302c1.015-.936 1.887-2.922 1.887-4.297v26c0-1.378-.868-3.357-1.888-4.297L.925 17.09c-1.237-1.14-1.233-3.034 0-4.17L8.11 6.302z"></path>
+														<path class="bp3-popover-arrow-fill" fill="ffffff" d="M8.787 7.036c1.22-1.125 2.21-3.376 2.21-5.03V0v30-2.005c0-1.654-.983-3.9-2.21-5.03l-7.183-6.616c-.81-.746-.802-1.96 0-2.7l7.183-6.614z"></path>
+													</svg>
+												</div>
+											</div>
+						          <li>
+												<a class="link" href="{{ "/platform/" | relURL }}">
+													<span class="f6 db b pa0">Platform technology</span>
+													<span class="l f7 db">Accounts, wrappper, features and functionality</span>
+												</a>
+											</li>
+						          <li>
+												<a class="link" href="{{ "/how/" | relURL }}">
+													<span class="f6 db b">How it works</span>
+													<span class="l f7 db">Considerations, roles and responsibilities</span>
+												</a>
+											</li>
+						        </ul>
+						      </li>
+									<li class="relative link option f6 l"><span>Resources</span>
+						        <ul>
+											<div class="bp3-popover-arrow-container">
+												<div class="bp3-popover-arrow">
+													<svg viewBox="0 0 30 30">
+														<path class="bp3-popover-arrow-border" fill="000000" d="M8.11 6.302c1.015-.936 1.887-2.922 1.887-4.297v26c0-1.378-.868-3.357-1.888-4.297L.925 17.09c-1.237-1.14-1.233-3.034 0-4.17L8.11 6.302z"></path>
+														<path class="bp3-popover-arrow-fill" fill="ffffff" d="M8.787 7.036c1.22-1.125 2.21-3.376 2.21-5.03V0v30-2.005c0-1.654-.983-3.9-2.21-5.03l-7.183-6.616c-.81-.746-.802-1.96 0-2.7l7.183-6.614z"></path>
+													</svg>
+												</div>
+											</div>
+						          <li>
+												<a class="link" href="https://faq.seccl.tech">
+													<span class="f6 db b">FAQ and due diligence</span>
+													<span class="l f7 db">Key questions about us and our services</span>
+												</a>
+											</li>
+						          <li>
+												<a class="link" href="https://learn.seccl.tech">
+													<span class="f6 db b">Learning centre</span>
+													<span class="l f7 db">Tutorials and support for existing users</span>
+											
+												</a>
+											</li>
+						          <li>
+												<a class="link" href="{{ "/customers/" | relURL }}">
+													<span class="f6 db b">Customer stories</span>
+													<span class="l f7 db">See how firms of all sizes use Seccl</span>
+												</a>
+											</li>
+						        </ul>
+						      </li>
+									<li class="relative link option f6 l"><a href="https://developers.seccl.tech/">API</a>
+						      </li>
+									<li class="relative link option f6 l"><a href="{{ "/pricing/" | relURL }}">Pricing</a>
+						      </li>
+									<li class="relative link option f6 l"><span>Company</span>
+										<ul>
+											<div class="bp3-popover-arrow-container">
+												<div class="bp3-popover-arrow">
+													<svg viewBox="0 0 30 30">
+														<path class="bp3-popover-arrow-border" fill="000000" d="M8.11 6.302c1.015-.936 1.887-2.922 1.887-4.297v26c0-1.378-.868-3.357-1.888-4.297L.925 17.09c-1.237-1.14-1.233-3.034 0-4.17L8.11 6.302z"></path>
+														<path class="bp3-popover-arrow-fill" fill="ffffff" d="M8.787 7.036c1.22-1.125 2.21-3.376 2.21-5.03V0v30-2.005c0-1.654-.983-3.9-2.21-5.03l-7.183-6.616c-.81-.746-.802-1.96 0-2.7l7.183-6.614z"></path>
+													</svg>
+												</div>
+											</div>
+											<li>
+												<a class="link" href="{{ "/about/" | relURL }}">
+													<span class="f6 db b">About us</span>
+													<span class="l f7 db">Our mission & vision</span>
+												</a>
+											</li>
+											<li>
+												<a class="link" href="{{ "/team/" | relURL }}">
+													<span class="f6 db b">Team</span>
+													<span class="l f7 db">Meet the Seccl team</span>
+												</a>
+											</li>
+											<li>
+												<a class="link" href="{{ "/careers/" | relURL }}">
+													<span class="f6 db b">Careers</span>
+													<span class="l f7 db">Join our growing team</span>
+												</a>
+											</li>
+											<li>
+												<a class="link" href="{{ "/blog/" | relURL }}">
+													<span class="f6 db b">Blog</span>
+													<span class="l f7 db">Culture, news and feature updates</span>
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<a href="{{ "/contact/" | relURL }}">
+											<button class="btn ml3-m mw6 center">Get in touch</button>
+										</a>
+									</li>
+                </ul>
+        </div>
+    </div>
+		</div>
+	</div>
+</nav>

@@ -1,0 +1,37 @@
+
+{{ define "main" }}
+{{ partial "jumbotron-about" (dict "title" .Params.title "subtitle" .Params.subtitle "buttontext" .Params.buttontext ) }}
+
+<section class="pv5 pv5-m" id="mission">
+  {{ partial "title-subtitle-center" .Params.section1 }}
+</section>
+
+<section class="pv5 pv6-m {{.Params.section2.backgroundstyle}}">
+  {{ partial "title-paragraph-background-image" .Params.section2 }}
+</section>
+
+<section class="pv5 pv6-m {{.Params.section3.backgroundstyle}}">
+  {{ partial "text-statement" .Params.section3 }}
+</section>
+
+<section class="pv4 pv5-m cover grad-m {{.Params.section4.backgroundstyle}}"> 
+  {{ partial "text-list-and-image-left" .Params.section4 }}
+</section>
+
+<section class="pt5 pv5-m">
+  {{ partial "cta-block" .Params }}
+</section>
+
+<section class="pt4 pb0 grad-m" id="leadership">
+  {{ partial "team" .Params.section5 }}
+</section>
+
+<section class="grad-m">
+  {{ partial "cta-block-single" .Params }}
+</section>
+
+<section class="pb5 ph3 grad-m">
+  {{ partial "newsletter-form" .Params }}
+</section>
+
+{{end}}

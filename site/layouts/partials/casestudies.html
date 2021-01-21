@@ -1,0 +1,15 @@
+{{ range .casestudy.cases }}
+<div class="w-100 br1 overflow-hidden raise shadow-1">
+  <a href="{{ .ctaurl }}">
+    <div class="relative image-block aspect-ratio--1x1 aspect-ratio--16x9-ns w-100 bg-top-m" style="background-image: url('{{ .image }}')">
+      <span class="absolute top-1 right-1"><img class="z-1" src="/img/p1-logo.svg" alt="{{ .alt}}"></span>
+    </div>
+    <div class="w-100 relative flex flex-wrap bg-secondary pa3">
+      <h2 class="white l f3 w-100 db">{{.title }}</h2>
+      <h3 class="white l f7 w-100 db">{{.subtitle }}</h3>
+      <span class="w-100 db f6 white l pv3">{{.caption }}</span>
+      <span class="w-100 db link-arrow white b f7">See P1's story...<span class="arrow-right-white"></span></span>
+    </div>
+  </a>
+</div>
+{{ end }}

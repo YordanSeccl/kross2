@@ -1,0 +1,12 @@
+<a href="{{ .RelPermalink }}" class="no-underline bg-white br1 mv2 db raise w-100 shadow-1 overflow-hidden pa1 relative flex flex-column">
+	<picture>
+	  <source data-srcset="{{.Params.imagewebp}}" type="image/webp">
+	  <source data-srcset="{{.Params.image}}" type="image/jpeg"> 
+	  <img data-src="{{.Params.image}}" alt="{{.Title}}" class="img-auto lazyload">
+	</picture>
+	<div class="pt2 pl2 pr2 flex flex-column h-100 justify-between">
+		<h3 class="f5 lh-title b mb1">{{ .Title }}</h3>
+		<p class="mb0 f7">{{ .Description }}</p>
+		<span class="link-arrow self-end b f7 pv2">More<span class="arrow-right-pink"></span></span>
+	</div>
+</a>

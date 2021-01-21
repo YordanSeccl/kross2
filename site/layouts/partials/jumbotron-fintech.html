@@ -1,0 +1,24 @@
+<div class="pt6 pb3 bg-bottom relative overflow-hidden bg-off-white z-1">
+  <div class="center ph3 mw7">
+    <div class="flex items-center flex-column">
+      <div class="relative tl mb2 tc pb2 ph3">
+        <h1 class="f2 l di lh-title mb3 mw6 black">
+          {{.title | safeHTML}}
+        </h1>
+      </div>
+      {{ if .subtitle }}
+      <div class="mw6 relative">
+        <p class="f5 di db mb3 black tc">
+          {{.subtitle | safeHTML}}
+        </p>
+      </div>
+      {{ end }}
+      {{ if .buttontext }}
+      <div class="flex relative pt2">
+        <a href="/contact"><button class="btn btn-tertiary mr3">Get a demo</button></a>
+        <a href="/fintechs/#functionality"><button class="btn ">See functionality</button></a>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</div>

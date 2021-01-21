@@ -1,0 +1,97 @@
+{{ define "main" }}
+{{ partial "jumbotron-peripheral" (dict "title" .Params.title "subtitle" .Params.subtitle "image" .Params.image ) }}
+
+<section class="center grad-secondary-light overflow-hidden pv4">
+  <div class="mw7 center ph3">
+    <div class="relative tl mb2 pb4 tc">
+      <h3 class="f5 b di lh-title mb3 mw6">
+        While you're here...<br/>Is there anything else we can help you with?
+      </h3>
+    </div>
+
+    <div class="help-container pv2 flex flex-wrap justify-between mhn2-ns relative z-1">
+
+      <a class="panel raise w-100 w-49-ns db" href="{{ "/" | relURL }}">
+        <span class="w-100 h-100 bg-off-white br1 db shadow-1 flex justify-between items-center">
+          <span class="db pl3">
+            <h3 class="f5 lh-title b">I’m just browsing</h3>
+            <p class="f6">Take me to the homepage</p>
+            <span class="link-arrow b f7">Visit now
+              <span class="arrow-right-pink"></span>
+            </span>
+          </span>
+          <span class="image help-image pr2">
+            <picture>
+              <source data-srcset="/img/help_home.webp" type="image/webp">
+              <source data-srcset="/img/help_home.png" type="image/jpeg">
+              <img data-src="/img/help_home.png" alt="Home" class="img-auto lazyload">
+            </picture>
+          </span>
+        </span>
+      </a>
+
+      <a class="panel raise w-100 w-49-ns db" href="https://faq.seccl.tech" target="_blank" rel="noreferrer">
+        <span class="w-100 h-100 bg-off-white br1 db shadow-1 flex justify-between items-center">
+          <span class="db pl3">
+            <h3 class="f5 lh-title b">I want to find out more</h3>
+            <p class="f6">Take me to the FAQs</p>
+            <span class="link-arrow b f7">Visit now
+              <span class="arrow-right-pink"></span>
+            </span>
+          </span>
+          <span class="image help-image pr2">
+            <picture>
+              <source data-srcset="/img/help_faq.webp" type="image/webp">
+              <source data-srcset="/img/help_faq.png" type="image/jpeg">
+              <img data-src="/img/help_faq.png" alt="FAQs" class="img-auto lazyload">
+            </picture>
+          </span>
+        </span>
+      </a>
+
+      <a class="panel raise w-100 w-49-ns db" href="https://learn.seccl.tech/" target="_blank" rel="noreferrer">
+        <span class="w-100 h-100 bg-off-white br1 db shadow-1 flex justify-between items-center">
+          <span class="db pl3">
+            <h3 class="f5 lh-title b">I’m an existing user</h3>
+            <p class="f6">Take me to the learning centre</p>
+            <span class="link-arrow b f7">Visit now
+              <span class="arrow-right-pink"></span>
+            </span>
+          </span>
+          <span class="image help-image pr2">
+            <picture>
+              <source data-srcset="/img/help_learn.webp" type="image/webp">
+              <source data-srcset="/img/help_learn.png" type="image/jpeg">
+              <img data-src="/img/help_learn.png" alt="Learn about Seccl" class="img-auto lazyload">
+            </picture>
+          </span>
+        </span>
+      </a>
+
+      <a class="panel raise w-100 w-49-ns db" href="#" onclick="Beacon('open')">
+        <span class="w-100 h-100 bg-off-white br1 db shadow-1 flex justify-between items-center">
+          <span class="db pl3">
+            <h3 class="f5 lh-title b">I’d like to get a demo</h3>
+            <p class="f6">Get a run-through of the Seccl system</p>
+            <span class="link-arrow b f7">Book now
+              <span class="arrow-right-pink"></span>
+            </span>
+          </span>
+          <span class="image help-image pr2">
+            <picture>
+              <source data-srcset="/img/help_support.webp" type="image/webp">
+              <source data-srcset="/img/help_support.png" type="image/jpeg">
+              <img data-src="/img/help_support.png" alt="Get a demo" class="img-auto lazyload">
+            </picture>
+          </span>
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="pb4 grad-m">
+  {{ partial "newsletter-form" .Params }}
+</section>
+
+{{ end }}

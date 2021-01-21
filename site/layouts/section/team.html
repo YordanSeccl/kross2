@@ -1,0 +1,13 @@
+
+{{ define "main" }}
+{{ partial "jumbotron" (dict "title" .Params.title "subtitle" .Params.subtitle "buttontext" .Params.buttontext "buttonurl" .Params.buttonurl  ) }}
+
+<section class="pt4" id="leadership">
+  {{ partial "team" .Params.section5 }}
+</section>
+
+<section class="pt2 pb5-m">
+  {{ partial "cta-block" .Params }}
+</section>
+
+{{end}}

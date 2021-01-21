@@ -1,0 +1,32 @@
+.drop {
+  position: relative;
+}
+
+.drop::after {
+  content: '';
+  background-image: url('/img/icon-down-arrow.svg');
+  background-size: 9px 7px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  display: block;
+  position: absolute;
+  right: 6px;
+  top: 0;
+  width: 9px;
+  height: 100%;
+}
+
+.video-intro::after {
+  content: '';
+  background-image: url('/img/icon-play.svg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  display: block;
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

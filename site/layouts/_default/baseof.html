@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="{{ $.Site.Language.Lang }}">
+  {{ partial "head" . }}
+  <body class="sans-serif">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T4PZWMN"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
+    {{ block "header" . }}{{ partial "nav" . }}{{end}}
+    
+    <div class="m-neg-nav {{ if eq (relURL .URL) ("/" | safeHTML) }}overflow-hidden{{ end }}">
+    
+    {{ block "main" . }}{{ end }}
+
+    {{ block "footer" . }}{{ partial "footer" . }}{{end}}
+    
+    </div>
+
+    {{ $script := .Site.Data.webpack.main }}
+    {{ with $script.js }}
+      <script src="{{ relURL . }}"></script>
+    {{ end }}
+  </body>
+</html>

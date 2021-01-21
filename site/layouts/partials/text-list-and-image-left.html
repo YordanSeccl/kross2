@@ -1,0 +1,41 @@
+<div class="relative">
+	<div class="ph3 mw7 center">
+		<div class="flex flex-column flex-row-m mhn2-l">
+			<div class="w-100 w-50-m mr4">
+				<h2 class="f3 l lh-title mb2">{{.heading}}</h2>
+				{{ if .subheading }}
+				<h3 class="f6 l mb2">{{.subheading | safeHTML}}</h3>
+				{{ end }}
+				<p class="f6">{{.text | safeHTML}}</p>
+				{{ if .bulletlist }}
+				<ul class="pv3">
+					{{ range .bulletlist }}
+					<li class="tick pb3 f6">
+						{{.text}}
+					</li>
+				{{ end }}
+				</ul>
+				{{ end }}
+				{{ if .list}}
+				<ul>
+					{{ range .list }}
+					<li class="pb3 f6">
+						<span class="db b">{{ .title }}</span>
+						<span class="db">{{ .text }}</span>
+					</li>
+				{{ end }}
+				</ul>
+				{{ end }}
+				{{ if .cta}}
+				<a href="{{ .ctaurl }}"><button class="btn">{{ .cta }}</button></a>
+				{{ end }}
+			</div>
+			{{ if .image }}
+			<div class="w-100 w-50-m">
+				<div class="overflow-hidden aspect-ratio--16x9 w-100 bg-top cover">
+				</div>
+			</div>
+			{{ end }}
+		</div>
+	</div>
+</div>

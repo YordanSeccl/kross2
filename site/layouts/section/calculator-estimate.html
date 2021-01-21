@@ -1,0 +1,11 @@
+
+{{ define "main" }}
+{{ partial "jumbotron" (dict "title" .Params.title "subtitle" .Params.subtitle) }}
+
+
+<section class="bg-off-white pv4 pb6-m pt5-m">
+  {{ partial "title-paragraph-list-image" .Params.section2 }}
+</section>
+
+
+{{end}}

@@ -1,0 +1,6 @@
+
+ @media (--breakpoint-not-small) {
+   .nav-banner {
+     justify-content: flex-end;
+   }
+}

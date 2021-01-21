@@ -1,0 +1,15 @@
+{{ define "main" }}
+
+{{ partial "jumbotron" (dict "title" .Params.title "subtitle" .Params.description ) }}
+<div class="flex-ns flex-column-ns flex-row-m center mw7 pv4 ph3 justify-between-ns">
+
+
+  <div class="mw6-m">
+    <h1>Section1</h1>
+
+    <div class="cms">
+      {{ .Content }}
+    </div>
+  </div>
+</div>
+{{ end }}

@@ -1,0 +1,62 @@
+{{ define "main" }}
+<!-- page header  -->
+<div class="flex relative overflow-hidden m-nav aspect-ratio--header bg-authors curve-out-center">
+  <div class="w-100 mw7 center pa3-ns flex flex-column items-center flex-row-ns aspect-ratio--object-ns">
+    
+    
+    <div  class="w-100 w-90-ns order-1 order-0-ns pa3">
+      <div class="w-100 h-100 flex flex-column justify-center">    
+        <h1 class="f2 l db lh-title  mw5-5 white tc tl-ns">{{ .Params.name }}</h1>
+        {{ if .Params.linkedinURL}}
+        {{ end}}
+        <h3 class="f6 white tc tl-ns">{{ .Content }}</h3>
+      </div>
+      <div class="social-block flex justify-center justify-start-ns">
+        <ul class="f6 flex flex-wrap social-block-wrapper">
+          {{ if .Params.linkedinURL}}
+          <li class="minw1 social-item pr2"><a href="{{.Params.linkedinURL}}" target="_blank" rel="noreferrer"><img src="/img/icons-linkedin.svg" alt="Seccl linkedin" class="social-icon"/></a></li>
+          {{ end}}
+          {{ if .Params.twitterURL}}
+          <li class="minw1 social-item pr2"><a href="{{.Params.twitterURL}}" target="_blank" rel="noreferrer"><img src="/img/icons-twitter.svg" alt="Seccl twitter" class="social-icon"/></a></li>
+          {{end}}
+          {{ if .Params.instagramURL}}
+          <li class="minw1 social-item"><a href="{{.Params.instagramURL}}" target="_blank" rel="noreferrer"><img src="/img/icons-instagram.svg" alt="Seccl instagram" class="social-icon"/></a></li>
+          {{end}}
+        </ul>
+      </div>
+    </div>
+     
+    <div class="order-0 order-1-ns w-35 mv3">
+      <div class="overflow-hidden relative aspect-ratio--1x1">
+        <div class="img-author-header aspect-ratio--object">
+          <img src="{{ .Params.photo }}" alt="{{ .Title }}" class="img-auto" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- page header ends  -->
+<section class="pv3 pv3-m">
+  
+  <div class="mw7 center pa3">
+    <h2 class="f3 lh-title mb2 l pb3 tc">    
+      {{ with .Params.name }}{{ index (split . " ") 0 }}'s latest articles
+      </h2>
+      {{ end }}
+    <ul class="flex-ns flex-wrap justify-between mhn1-ns">
+      {{ range first 6 .Data.Pages }}
+      
+      <div class="w-49-ns w-32-m flex card">
+      
+        {{ .Render "li"}}
+        
+      </div>
+      {{ end }}
+    </ul>
+  </div>
+</section>
+
+<section class="mb5">
+  {{ partial "newsletter-form" .Params }}
+</section>
+{{ end }}

@@ -1,0 +1,12 @@
+
+<ul class="side-bar mb4 flex flex-column-m justify-between w-100">
+  {{ if .option0 }}
+  <li class="f6 flex pb3-m items-center"><a href="{{ .url }}" class="link f6 flex"><div class="w40-p mr1"><img src="{{ .icon0 }}" alt="{{ .icon0alt }}"></div>{{ .option0 }}</a></li>
+  {{ end }}
+  {{ if .option1 }}
+  <li class="f6 flex pv3-m items-center"><div class="w40-p mr1"><img src="{{ .icon1 }}" alt="{{ .icon1alt }}"></div>{{ .option1 }}</li>
+  {{ end }}
+  {{ if .option2 }}
+  <li class="f6 flex pt3-m items-center"><div class="w40-p mr1"><img src="{{ .icon2 }}" alt="{{ .icon2alt }}"></div>{{ .option2 }}</li>
+  {{ end }}
+</ul>

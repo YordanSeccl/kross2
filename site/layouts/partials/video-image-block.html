@@ -1,0 +1,13 @@
+<a href="{{ .videoimageblock.videolink }}" data-lity>
+  <div class="relative video-intro aspect-ratio--16x9 w-100 bg-top" style="background-image: url('{{ .videoimageblock.image }}')">
+    <div class="absolute w-100 h-100">
+      <div class="relative h-100">
+         <div class="absolute top-0 right-0 pa3">
+           <h2 class="white l f3">{{ .videoimageblock.title }}</h2>
+           <h3 class="white l f7">{{ .videoimageblock.subtitle }}</h3>
+          </div>
+      </div>
+    </div>
+  </div>
+  <span class="white db bg-secondary pa3 w-100 bottom-0 l i">{{ .videoimageblock.caption }}</span>
+</a>

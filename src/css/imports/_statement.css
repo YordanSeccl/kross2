@@ -1,0 +1,43 @@
+.statement-container:nth-last-of-type(even) {
+  flex-direction: row-reverse;
+}
+.statement{
+    position: relative;
+    width: 50%;
+    overflow: hidden;
+    border-radius: 100%;
+}
+.statement:before{
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+.statement-inner{
+    padding: var(--spacing-medium);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    color: white;
+    text-align: center;
+}
+
+.primary-bg {
+  background-color: var(--primary);
+}
+
+.secondary-bg {
+  background-color: var(--secondary);
+}
+
+.tertiary-bg {
+  background-color: var(--tertiary);
+}
+
+.pink-bg {
+  background-color: var(--pink);
+}

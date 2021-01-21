@@ -1,0 +1,35 @@
+<div class="pt6 pb3 bg-bottom relative bg-off-white">
+  <div class="center ph3 mw7">
+    <div class="flex items-center flex-column">
+      <div class="relative tl mb2 tc pb2 ph3">
+        <h1 class="f2 l di lh-title mb3 db mw6 black">
+          {{.title | safeHTML}}
+        </h1>
+      </div>
+      {{ if .subtitle }}
+      <div class="mw6 relative">
+        <p class="f5 di db mb3 black tc">
+          {{.subtitle | safeHTML}}
+        </p>
+      </div>
+      {{ end }}
+      <div class="flex flex-wrap">
+        <div class="w-100 w-40-m self-end-m">
+          <div class="aspect-ratio--16x9 relative">
+            <picture class="absolute w-100 h-100">
+              <source data-srcset="{{.imagewebp}}" type="image/webp">
+              <source data-srcset="{{.image}}" type="image/jpeg"> 
+              <img data-src="{{.image}}" alt="{{ .name }}" class="img-100 lazyload">
+            </picture>
+          </div>
+        </div>
+        <div class="w-100 w-60-m flex flex-wrap self-end-m bg-secondary white l pa3 relative m-neg-l">
+          <h2 class="w-100 f4">{{.quote}}</h2>
+          <span class="db w-100 f6">{{.name}}</span>
+          <span class="db f7">{{.position}}</span>
+          <span class="absolute w-15">{{.logo}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

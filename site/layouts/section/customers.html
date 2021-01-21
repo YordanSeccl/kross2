@@ -1,0 +1,31 @@
+
+{{ define "main" }}
+<section>
+  {{ partial "jumbotron" (dict "title" .Params.title "subtitle" .Params.subtitle "buttontext" .Params.buttontext ) }}
+  {{ partial "media-block" .Params }}
+</section>
+
+<section class="grad-m pv4 pv5-m">
+  <div class="flex flex-wrap flex-wrap-mi justify-between ph3 center mw7">
+    <div class="bg-white w-100 w-40-m mr4-m mb4 mb0-m br1 shadow-1 pa3 self-start">
+      <h3 class="f6 l db">We build the technology that allows people to invest through tax wrappers like ISAs and pensions. Our software is the driving force behind investment and advice firms of all sizes.<br/><br/>With our custody service and investment technology, financial advisers and wealth managers can aspire to own more of the value chain, by operating their own platform; one that better serves the needs of their clients, and more fully integrates with the rest of their business.
+        <br/><br/>And thanks to our pioneering API, fintechs can get to market more quickly and cheaply than ever before - creating the ambitious products and services that could help millions of people to better manage their money.</h3>
+      <div class="mv3">
+        <a href="/customers/p1-investment-management/">
+          <button class="btn btn-tertiary">Read more</button>
+        </a>
+      </div>
+    </div>
+    <div class="flex flex-wrap justify-end w-100 w-60-m self-start">
+      {{ partial "casestudies" .Params }}
+    </div>
+  </div>
+</section>
+
+<section class="grad-m pv4 pv5-m">
+  <div class="center mw7">
+    {{ partial "cta-block" .Params }}
+  </div>
+</section>
+
+{{end}}

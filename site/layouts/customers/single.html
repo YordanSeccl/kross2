@@ -1,0 +1,45 @@
+{{ define "main" }}
+{{ partial "jumbotron-casestudies" (dict "title" .Params.title "subtitle" .Params.description "image" .Params.image "quote" .Params.quote "position" .Params.position "name" .Params.name ) }}
+
+<section>
+  <div class="flex-ns flex-column-ns flex-row-m center mw7 pv4 ph3 justify-between-ns">
+    <div class="mw4-m">
+      {{ partial "side-bar" (dict "option0" "Back" "url" "/customers" "icon0" "/img/icon-arrow-left.svg" "icon0alt" "back" ) }}
+    </div>
+
+    <div class="mw6-m">
+      <div class="cms">
+        {{ .Content }}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="flex-ns flex-column-ns flex-row-m center mw7 pb4 ph3 justify-between-ns">
+    <div class="mw4-m">
+    </div>
+    <div class="mw6-m flex flex-row br1 shadow-1 pa3 w-100 justify-between">
+      <div class="item-data">
+        <h2 class="tc secondary f3 l">2016</h2>
+        <p class="tc f7">P1 founded by James and team</p>
+      </div>
+      <div class="item-data">
+        <h2 class="tc secondary f3 l">£200m</h2>
+        <p class="tc f7">Assets under management</p>
+      </div>
+      <div class="item-data">
+        <h2 class="tc secondary f3 l">25</h2>
+        <p class="tc f7">Advice firms using its DFM models</p>
+      </div>
+      <div class="item-data">
+        <h2 class="tc secondary f3 l">7</h2>
+        <p class="tc f7">Firms using or soon to use its platform</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="grad-m pv4 pv5-m">
+  {{ partial "cta-block" .Params }}
+</section>
+{{ end }}

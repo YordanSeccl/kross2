@@ -1,0 +1,21 @@
+<div class="blog relative overflow-hidden bg-white pv3 pv4-ns cover grad-p">
+	<div class="mw7 center ph3 flex flex-column">
+			
+		<h2 class="f3 l white lh-title mb3">{{ .Params.blog.heading }}</h2>
+			
+		<div class="w-100 flex-ns mhn1-ns flex-wrap mb3">
+			{{ range first 4 (where .Site.Pages "Params.type" "blog").ByPublishDate.Reverse }}
+			
+				<div class="ph2-ns w-100 w-50-ns w-25-l flex">
+			{{ .Render "li" }}
+			</div>
+		{{ end }}
+		</div>
+		<a href="{{ "/blog/" | relURL }}" class="link-arrow self-end b f7 white">{{ .Params.blog.buttontext }}<span class="arrow-right-white"></span></a>
+	</div>
+</div>
+
+
+
+
+

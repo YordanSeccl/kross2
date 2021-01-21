@@ -1,0 +1,28 @@
+<div class="ph3 mw7 center">
+
+	<div class="flex flex-column flex-row-ns mhn2-l">
+		<div class="w-100 w-70-ns pr4-ns pb3-ns order-1 order-0-ns">
+			<h2 class="f3 l lh-title mb2">{{.heading}}</h2>
+
+			<p class="f6">{{.text}}</p>
+			
+			<ul class="pv3">
+				{{ range .list }}
+				<li class="tick pb3 f6">{{.text}}</li>
+				{{end }}
+			</ul>
+
+			<a href="{{ "/customers/" | relURL }}"><button class="btn">{{.buttontext}}</button></a>
+		</div>
+		<div class="w-30-l relative order-0 order-1-ns">
+			<div class="img-round">
+				<picture>
+	        <source data-srcset="{{.imagewebp}}" type="image/webp">
+	        <source data-srcset="{{.image}}" type="image/jpeg"> 
+	        <img data-src="{{.image}}" alt="{{.alt}}" class="mb3 lazyload">
+	      </picture>
+			</div>
+		</div>
+		
+	</div>	
+</div>

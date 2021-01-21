@@ -1,0 +1,20 @@
+<div class="center mw7 ph3">
+  <div class="flex flex-column flex-row-m justify-between">
+    {{ range .items }}
+    <div class="w-100 w-47-m pb3">
+      <div class="relative tl mb2 pb2">
+        <h2 class="f3 l di lh-title mb3 black">
+          {{ .heading }}
+        </h2>
+      </div>
+      {{ if .subheading }}
+      <div class="mw7 relative">
+        <p class="f6 di db mb3 black">
+          {{ .subheading | safeHTML }}
+        </p>
+      </div>
+      {{ end }}
+    </div>
+    {{ end }}
+  </div>
+</div>

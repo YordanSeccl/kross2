@@ -1,0 +1,15 @@
+.bgimg-none {
+  background-image: none;
+}
+
+@media (--breakpoint-not-small) {
+  .bgimg-none-ns {
+    background-image: none;
+  }
+}
+
+@media (--breakpoint-medium) {
+  .bgimg-none-ns {
+    background-image: none;
+  }
+}

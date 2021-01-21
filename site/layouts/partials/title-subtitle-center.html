@@ -1,0 +1,14 @@
+<div class="center w-70-m mw7 ph3 flex flex-column items-center">
+  <div class="tc mb2 pb2">
+    <h2 class="f3 l di lh-title mb3 black">
+      {{ .heading }}
+    </h2>
+  </div>
+  {{ if .subheading }}
+  <div class="mw7 tc">
+    <p class="f6 di db mb3 black">
+      {{ .subheading | safeHTML }}
+    </p>
+  </div>
+  {{ end }}
+</div>
