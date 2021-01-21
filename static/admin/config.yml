@@ -3,7 +3,7 @@ backend:
   branch: master
 media_folder: "site/static/img" # Folder where user uploaded files should go
 public_folder: "img"
-publish_mode: editorial_workflow
+
 
 collections: # A list of collections the CMS should be able to edit
   - name: "Blog" # Used in routes, ie.: /admin/collections/:slug/edit
@@ -12,17 +12,6 @@ collections: # A list of collections the CMS should be able to edit
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Description", name: "description", widget: "hidden", default: ">-"}
-      - {label: "Og Image", name: "ogimage", widget: "image", default: "/img/og-image.jpg"}
-      - {label: "MetaTitle", name: "metatitle", widget: "string"}
-      - {label: "MetaDescription", name: "metadescription", widget: "string"}
-      - {label: "Author", name: "author", widget: "string"}
-      - {label: "Categories", name: "categories", widget: "string"}
-      - {label: "imagewebp", name: "imagewebp", widget: "hidden", default: ""}
-      - {label: "Image", name: "image", widget: "image"}
-      - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Type", name: "type", widget: "hidden", default: "blog"}
   - name: "Careers"
     label: "Careers post"
     folder: "site/content/careers"
