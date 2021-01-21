@@ -3,14 +3,15 @@ title: hello hello
 date: 2021-01-17T17:12:07.368Z
 metatitle: sdgsdgsdg
 metadescription: sdgsdg
-author:
-- Yordan Monev
-categories: 
-- growth
+author: List [ "Stuart Sheppard" ]
+categories:
+  - growth
 image: img/06-02.png
 ogimage: img/2-Old-and-new.jpg
 type: blog
 ---
+alo balo
+
 Before Christmas we introduced you to [Raindrop](https://yordanmonev.com/blog/raindrop-pensions-self-employed), one of our newest clients that’s on a mission to help freelancers save for retirement.
 
 A few weeks on and we’re delighted to lift the lid on our work with another hugely exciting business that’s making dramatic waves in the fintech space: [Multiply](https://multiply.ai/).
