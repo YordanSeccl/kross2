@@ -15,6 +15,7 @@ A few weeks on and we’re delighted to lift the lid on our work with another hu
 
 #### Who are Multiply?
 
+sdfsdf
 In July 2019, Multiply became [one of the first ](https://www.altfi.com/article/5489_multiply-myeva-vivek-madlani-ceo-digital-independent-financial-adviser-launch)financial advice apps (and the first that’s consumer-facing) to be approved by the Financial Conduct Authority (FCA).
 
 Since then, the team has created plans around more than £1 billion of assets and debt, and made 11,000 individual recommendations – through an impressively simple and easy-to-use mobile app built around an AI-powered chatbot.
