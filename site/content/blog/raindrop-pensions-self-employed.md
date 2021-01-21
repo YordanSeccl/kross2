@@ -1,23 +1,21 @@
 ---
-title: Meet Raindrop… flexible pensions for the self-employed
-date: 2020-12-18T05:15:10.000Z
-description: >-
-
-metatitle: Seccl | Meet Raindrop...flexible pensions for the self-employed
-metadescription: Say hello to one of our latest clients, Raindrop – an exciting young business that’s putting flexible pensions in the hands of the UK’s growing army of self-employed.
-
+ogimage: /img/raindrop-og.jpg
 authors:
   - Dan Marsh
+title: Meet Raindrop… flexible pensions for the self-employed
+date: 2020-12-18T05:15:10.000Z
+description: ""
+metatitle: Seccl | Meet Raindrop...flexible pensions for the self-employed
+metadescription: Say hello to one of our latest clients, Raindrop – an exciting
+  young business that’s putting flexible pensions in the hands of the UK’s
+  growing army of self-employed.
+author: Yordan Monev
 categories:
- - growth
+  - growth
 image: /img/raindrop-header.jpg
-imagewebp:
-ogimage: /img/raindrop-og.jpg
+imagewebp: null
 type: blog
-
 ---
-
-
 I always say that one of the best things about my day job is that I get to work with some of the most innovative firms in financial services today. And our latest client, <a href="https://myraindrop.co.uk/" target="_blank">Raindrop</a>, is the perfect example.
 
 {{< figure src="/img/raindrop-square.jpg" class="left25">}}
@@ -27,6 +25,8 @@ Raindrop’s on a mission to put flexible pensions in the hands of the UK’s gr
 After securing their initial funding earlier this year, we’ve been supporting them over the last few months as they prepare to launch publicly – and are really excited to be working together to put financial freedom in the hands of a large – and growing – segment of the population.
 
 #### A growing challenge
+
+hello my name is natasha
 
 According to the Office of National Statistics (ONS), there were more than <a href="https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/articles/coronavirusandselfemploymentintheuk/2020-04-24" target="_blank">5 million</a> self-employed people in the UK at the end of 2019. That’s 15.3% of the total workforce – and up a staggering 56% from 2000.
 
@@ -46,7 +46,6 @@ Raindrop’s designed to cater for that flexibility – helping freelancers or b
 
 Users can also choose whether to pay from their personal account or through their limited company, to reduce their tax bill. And it all takes less than ten minutes to set up – so that time-poor self-employed professionals needn’t have to sacrifice present day productivity for future security.
 
-
 #### A great partnership
 
 Raindrop’s proposition is a great example of the kind we love to support here at Seccl. They’ve honed in on a clearly defined segment, with a proven pain point, and designed an elegant, customer-centric solution to tackle it.
@@ -59,7 +58,6 @@ It’s what [our clients](/customers) do best. But in our experience, many innov
 
 Ours isn’t a product that’s used once or twice a month by a few users within a business – it’s a mission critical service that underpins the proposition our clients are able to offer. It’s for this reason that we tend to think of our clients as business partners rather than merely customers – and we’re thrilled to be able to help them along the way.
 
-
 #### A brighter future
 
 The retirement prospects for many in the UK are rocky, to say the least. Too few of us are saving enough to be able to lead the comfortable lives we all dream of after hanging up our boots.
@@ -68,5 +66,4 @@ And as the world reels from a global pandemic whose economic consequences we’r
 
 In this context, innovative tools that help people to plan for their retirement have never been more important. Raindrop, and others like it, are working hard to bring a brighter future for people of all walks of life. And for that, we salute you.
 
-
-__To see more of the innovative firms that we work with, check out some of our recent <a href="https://www.youtube.com/playlist?list=PLxeXVEiMw0imu0I8NBwynfbC8g80USzT9" target="_blank">client spotlights</a>.__
+**To see more of the innovative firms that we work with, check out some of our recent <a href="https://www.youtube.com/playlist?list=PLxeXVEiMw0imu0I8NBwynfbC8g80USzT9" target="_blank">client spotlights</a>.**
