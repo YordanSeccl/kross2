@@ -3,7 +3,7 @@ title: hello hello
 date: 2021-01-17T17:12:07.368Z
 metatitle: sdgsdgsdg
 metadescription: sdgsdg
-authors: "- Stuart Sheppard"
+authors: - Stuart Sheppard
 categories:
   - growth
 image: img/06-02.png
