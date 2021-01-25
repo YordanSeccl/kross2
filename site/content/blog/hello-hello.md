@@ -3,8 +3,8 @@ title: hello hello
 date: 2021-01-17T17:12:07.368Z
 metatitle: sdgsdgsdg
 metadescription: sdgsdg
-author:
-  - Dan Marsh
+authors:
+- Dan Marsh
 categories:
 - growth
 image: img/06-02.png
