@@ -4,9 +4,9 @@ date: 2021-01-17T17:12:07.368Z
 metatitle: sdgsdgsdg
 metadescription: sdgsdg
 authors:
-Dan Marsh
+- Dan Marsh
 categories:
-growth
+- growth
 image: img/06-02.png
 ogimage: img/2-Old-and-new.jpg
 type: blog
