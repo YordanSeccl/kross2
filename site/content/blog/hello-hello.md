@@ -4,7 +4,7 @@ date: 2021-01-17T17:12:07.368Z
 metatitle: sdgsdgsdg
 metadescription: sdgsdg
 author:
-- Stuart Sheppard
+  - Dan Marsh
 categories:
 - growth
 image: img/06-02.png
