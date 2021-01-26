@@ -16,8 +16,8 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Description", name: "description", widget: "hidden"}
       - {label: "MetaTitle", name: "metatitle", widget: "string"}
       - {label: "MetaDescription", name: "metadescription", widget: "string"}
-      - {label: "Author", name: "authors", widget: "select", options: [> - Dan Marsh, > - Stuart Sheppard]}
-      - {label: "category", name: "categories", widget: "select", options: [> - product, > - growth]}
+      - {label: "Author", name: "authors", widget: "select", options: [- Dan Marsh, - Stuart Sheppard]}
+      - {label: "category", name: "categories", widget: "select", options: [- product, - growth]}
       - {label: "Image", name: "image", widget: "image"}
       - {label: "imagewebp", name: "imagewebp", widget: "hidden"}
       - {label: "Og Image", name: "ogimage", widget: "image", default: "/img/og-image.jpg"}
