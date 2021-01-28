@@ -3,8 +3,7 @@ title: heh
 date: 2021-01-27T09:45:37.545Z
 metatitle: sdlkfj
 metadescription: sdfsdf
-authors: |-
-  
+authors: 
   - Stuart Sheppard
 categories:
   - growth
