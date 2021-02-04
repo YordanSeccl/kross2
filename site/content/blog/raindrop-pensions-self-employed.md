@@ -1,7 +1,4 @@
 ---
-ogimage: /img/raindrop-og.jpg
-authors:
-  - Dan Marsh
 title: Meet Raindrop… flexible pensions for the self-employed
 date: 2020-12-18T05:15:10.000Z
 description: ""
@@ -9,9 +6,14 @@ metatitle: Seccl | Meet Raindrop...flexible pensions for the self-employed
 metadescription: Say hello to one of our latest clients, Raindrop – an exciting
   young business that’s putting flexible pensions in the hands of the UK’s
   growing army of self-employed.
-author: Yordan Monev
+authors: |-
+  
+
+  \- Stuart Sheppard
 categories:
   - growth
+ogimage: /img/raindrop-og.jpg
+author: Yordan Monev
 image: /img/raindrop-header.jpg
 imagewebp: null
 type: blog
