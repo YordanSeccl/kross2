@@ -6,7 +6,9 @@ metatitle: Seccl | Meet Raindrop...flexible pensions for the self-employed
 metadescription: Say hello to one of our latest clients, Raindrop – an exciting
   young business that’s putting flexible pensions in the hands of the UK’s
   growing army of self-employed.
-authors: "- Stuart Sheppard"
+authors: |-
+  
+  - Stuart Sheppard
 categories:
   - growth
 ogimage: /img/raindrop-og.jpg
