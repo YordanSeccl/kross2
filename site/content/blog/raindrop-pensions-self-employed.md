@@ -8,8 +8,7 @@ metadescription: Say hello to one of our latest clients, Raindrop – an excitin
   growing army of self-employed.
 authors: |-
   
-
-  \- Stuart Sheppard
+  - Stuart Sheppard
 categories:
   - growth
 ogimage: /img/raindrop-og.jpg
