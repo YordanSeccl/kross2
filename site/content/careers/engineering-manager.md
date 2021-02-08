@@ -1,17 +1,18 @@
 ---
-metatitle: Seccl | Careers | Engineering manager
-metadescription: Seccl | We're looking for someone to help scale our Engineering function at an exciting time in our growth.
+ogimage: /img/engineering-manager-og.jpg
 title: Engineering manager
 date: 2020-11-11T08:41:04.379Z
-ogimage: /img/engineering-manager-og.jpg
+description: We're looking for someone to help scale our Engineering function at
+  an exciting time in our growth.
 location: Bath
 contract: Full time
-description: >-
-  We're looking for someone to help scale our Engineering function at an exciting time in our growth.
 section: careers
+metatitle: Seccl | Careers | Engineering manager
+metadescription: Seccl | We're looking for someone to help scale our Engineering
+  function at an exciting time in our growth.
 image: /img/engineering-manager.jpg
-
 ---
+### sdfsdfsdfsdfsdf
 
 ### Who are we?
 
@@ -23,33 +24,30 @@ And we help fintechs to realise their ambitions, by providing plug-and-play acce
 
 We are part of the <a href="https://www.octopusgroup.com" target="blank">Octopus Group</a> – an innovative group of companies that’s on a mission to breathe new life into energy and financial services. We want to change both these industries for the better, to reinvent them the way they should be, improving the lives of millions of people.
 
-
 ### How can you help?
 
 We are looking for an enthusiastic and experienced Engineering Manager to help scale our Engineering function at an exciting time in our growth.  You will do this by building strong Product teams by supporting their developers and processes.  You will play a key role in the continued development of our strong, psychologically safe Engineering culture of continual learning, trust, empowerment and experimentation are at the heart.  It is unlikely that you will be hands-on with code but you will need enough technical experience to contribute to technical discussions and be able to empathise with the technical team.
 
 ### What will you be doing?
 
-*	Building and enabling great Product teams through personal development and line management of engineers.
-*	Ensuring we have the right technical skills in the team to tackle the challenges the business is solving.
-*	Recruiting and onboarding.
-*	Working closely with Product Managers and other key stakeholders to ensure timely delivery of value to our clients.
-*	Championing a culture of strong modern engineering, agile and quality practices such as automated testing and small, frequent deploys to production.
-*	Working with Head of Engineering and other senior stakeholders to deliver cross-team initiatives that contribute to our foundations for growth and success such as training, process improvement, tech blogs.
-*	Contribute and develop appropriate KPIs and metrics that enable teams to continually improve.
-
+* Building and enabling great Product teams through personal development and line management of engineers.
+* Ensuring we have the right technical skills in the team to tackle the challenges the business is solving.
+* Recruiting and onboarding.
+* Working closely with Product Managers and other key stakeholders to ensure timely delivery of value to our clients.
+* Championing a culture of strong modern engineering, agile and quality practices such as automated testing and small, frequent deploys to production.
+* Working with Head of Engineering and other senior stakeholders to deliver cross-team initiatives that contribute to our foundations for growth and success such as training, process improvement, tech blogs.
+* Contribute and develop appropriate KPIs and metrics that enable teams to continually improve.
 
 ### Who are we looking for? You’ll be someone who…
 
 * Loves to develop engineers and their teams and create an enabling environment for them to thrive.
-*	Is experienced at working with high performing engineering teams that deliver high quality value.
-*	Is collaborative and can see the bigger picture at a systems level as well as the detail
-*	Is comfortable in a fast paced, ever changing and improving development environment.
-*	Can work with stakeholders across the breadth and depth of the business to influence change, enable or unblock issues.
-*	Has strong communication and leadership skills
-*	Is a curious and continuous learner who develops themselves as well as others
-*	Love to build great products with scale, security, resilience and a great customer experience.
-
+* Is experienced at working with high performing engineering teams that deliver high quality value.
+* Is collaborative and can see the bigger picture at a systems level as well as the detail
+* Is comfortable in a fast paced, ever changing and improving development environment.
+* Can work with stakeholders across the breadth and depth of the business to influence change, enable or unblock issues.
+* Has strong communication and leadership skills
+* Is a curious and continuous learner who develops themselves as well as others
+* Love to build great products with scale, security, resilience and a great customer experience.
 
 ### How do we work?
 
