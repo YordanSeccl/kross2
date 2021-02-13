@@ -29,12 +29,14 @@ collections: # A list of collections the CMS should be able to edit
     filter: {field: "section", value: "careers"}
     create: true
     fields:
-      - {label: "Draft", name: "draft", widget: "boolean", default: true, required: false}
       - {label: "Og Image", name: "ogimage", widget: "image", default: "/img/og-image.jpg"}
+      - {label: "Image", name: "image", widget: "image"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Description", name: "description", widget: "text"}
+      - {label: "MetaTitle", name: "metatitle", widget: "string"}
+      - {label: "MetaDescription", name: "metadescription", widget: "string"}
       - {label: "Location", name: "location", widget: "text", default: "Bath"}
       - {label: "Contract", name: "contract", widget: "text", default: "Full time"}
-      - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Section", name: "section", widget: "hidden", default: "careers"}
+      - {label: "Body", name: "body", widget: "markdown"}
