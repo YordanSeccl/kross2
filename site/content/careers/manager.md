@@ -1,9 +1,12 @@
 ---
 draft: false
 ogimage: img/digital-academy-adnan-og.jpg
+image: img/01-02.png
 title: manager
 date: 2021-02-07T10:12:10.462Z
-description: manage the company
+description: manage the companysdfsdf
+metatitle: sdf
+metadescription: sdf
 location: Bath
 contract: Full time
 section: careers
